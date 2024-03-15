@@ -1,0 +1,6 @@
+# Hashes of file build rules.
+56e0a150a12045891db455f845899386 CMakeFiles/client_autogen
+69252258ea38f7c93753df9b4c80f06c ui_loginform.h
+3a974d01a18bfabce8b25e2ecbd3d6af ui_mainwindow.h
+3ad66c302fd51a2e39c21a68411a457c ui_regform.h
+36e46cdc26419946702e2db82275f70f ui_startscreen.h

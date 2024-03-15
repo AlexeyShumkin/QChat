@@ -1,0 +1,4 @@
+/home/awl/projects/QChat/client/build-client-qt5-Debug/CMakeFiles/client.dir
+/home/awl/projects/QChat/client/build-client-qt5-Debug/CMakeFiles/edit_cache.dir
+/home/awl/projects/QChat/client/build-client-qt5-Debug/CMakeFiles/rebuild_cache.dir
+/home/awl/projects/QChat/client/build-client-qt5-Debug/CMakeFiles/client_autogen.dir
