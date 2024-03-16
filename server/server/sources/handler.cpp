@@ -23,3 +23,12 @@ bool SignInHandler::specHandle(QString& str)
     str = DBHandler::getConnection()->getData(query);
     return str.size();
 }
+
+bool PubPostHandler::specHandle(QString& str)
+{
+    QString substr = str.mid(0, str.indexOf(' '));
+    query = "INSERT INTO msgdata(sender_id, content) VALUES('" + substr + "','";
+    substr = str.mid(str.indexOf(' ') + 1);
+    query += substr + "')";
+    return DBHandler::getConnection()->executeQuery(query);
+}

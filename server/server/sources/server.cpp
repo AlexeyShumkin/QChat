@@ -24,6 +24,9 @@ void Server::serverUp(QString& str)
     case SIGNIN:
         setHandler(std::make_unique<SignInHandler>());
         break;
+    case PUB:
+        setHandler(std::make_unique<PubPostHandler>());
+        break;
     }
     str = str.mid(str.indexOf('#') + 1);
 }

@@ -21,3 +21,9 @@ class SignInHandler : public IHandler
 public:
     bool specHandle(QString& str) override;
 };
+
+class PubPostHandler : public IHandler
+{
+public:
+    bool specHandle(QString& str) override;
+};

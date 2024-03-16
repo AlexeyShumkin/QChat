@@ -18,7 +18,7 @@ private:
     QVector<QTcpSocket*> sockets_;
     QByteArray data_;
     quint16 nextBlockSize{0};
-    enum Commands { SIGNUP = 1, SIGNIN };
+    enum Commands { SIGNUP = 1, SIGNIN, PUB };
     std::unique_ptr<IHandler> handler;
 
     void sendToClient(QString str);

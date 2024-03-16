@@ -1,6 +1,8 @@
 #include "mainwindow.h"
 #include "./ui_mainwindow.h"
 #include "startscreen.h"
+#include <QMessageBox>
+#include <QTimer>
 
 MainWindow::MainWindow(int id, std::shared_ptr<Session> s, QWidget *parent)
     : QMainWindow(parent)
@@ -36,8 +38,21 @@ void MainWindow::on_msgEdit_returnPressed()
 
 void MainWindow::on_pubButton_clicked()
 {
-    QString str = "3#" + QVariant(userID).toString() + ui->msgEdit->text();
+    QString str = "3#" + QVariant(userID).toString() + ' ' + ui->msgEdit->text();
     session->sendToServer(str);
+    ui->msgEdit->clear();
+    QTimer::singleShot(1000, this, [=]() {
+        auto respond = session->getBuffer();
+        if(respond == "-1")
+        {
+            QMessageBox::critical(this, tr("error"), tr("failed dispatch"));
+            return;
+        }
+        else
+        {
+            ui->textBrowser->append(respond);
+        }
+    });
 }
 void MainWindow::on_pvtButton_clicked()
 {
