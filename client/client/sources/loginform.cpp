@@ -32,14 +32,15 @@ void LoginForm::on_buttonBox_accepted()
     QString str = "2#" + ui->loginEdit->text() + ' ' + QString::number(hasher(ui->passwordEdit->text()));
     session->sendToServer(str);
     QTimer::singleShot(1000, this, [=]() {
-        auto i = session->getBuffer().toInt();
-        switch(i)
+        auto id = session->getBuffer().toInt();
+        if(id <= 0)
         {
-        case -1:
             QMessageBox::critical(this, tr("error"), tr("Invalid login or password"));
             return;
-        default:
-            emit accepted();
+        }
+        else
+        {
+            emit accepted(id);
             return;
         }
     });

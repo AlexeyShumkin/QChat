@@ -19,12 +19,15 @@ public:
     void setLoginForm();
     void setRegForm();
     std::shared_ptr<Session> getSession() const;
+    int getUserID() const;
+
 public slots:
-    void onLoggedIn();
+    void onLoggedIn(int id);
     void onRejectRequested();
 private:
     Ui::StartScreen *ui;
     std::shared_ptr<Session> session;
+    int userID;
 };
 
 #endif // STARTSCREEN_H

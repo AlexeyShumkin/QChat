@@ -20,7 +20,7 @@ public:
 
 signals:
     void loginRequested();
-    void accepted();
+    void accepted(int id);
     void rejected();
 
 private slots:

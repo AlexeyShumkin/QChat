@@ -14,7 +14,7 @@ class MainWindow : public QMainWindow
     Q_OBJECT
 
 public:
-    MainWindow(std::shared_ptr<Session> s = nullptr, QWidget *parent = nullptr);
+    MainWindow(int id, std::shared_ptr<Session> s = nullptr, QWidget *parent = nullptr);
     ~MainWindow();
     static MainWindow* createClient();
 
@@ -26,5 +26,6 @@ private slots:
 private:
     Ui::MainWindow* ui;
     std::shared_ptr<Session> session;
+    int userID;
 };
 #endif // MAINWINDOW_H

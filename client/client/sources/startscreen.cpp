@@ -37,14 +37,20 @@ std::shared_ptr<Session> StartScreen::getSession() const
     return session;
 }
 
-void StartScreen::onLoggedIn()
+void StartScreen::onLoggedIn(int id)
 {
+    userID = id;
     accept();
 }
 
 void StartScreen::onRejectRequested()
 {
     reject();
+}
+
+int StartScreen::getUserID() const
+{
+    return userID;
 }
 
 
