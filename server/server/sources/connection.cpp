@@ -1,7 +1,6 @@
 #include "connection.h"
 #include <QMessageBox>
 #include <QtSql>
-#include <QDebug>
 
 DBHandler::~DBHandler()
 {
@@ -31,11 +30,23 @@ QString& DBHandler::getData(QString& str)
 {
     QSqlQuery query(db);
     query.exec(str);
+    QSqlRecord rec = query.record();
     str.clear();
-    for(size_t i = 0; query.next(); ++i)
+    while(query.next())
     {
-        str += query.value(i).toString();
+        for(int i = 0; i < rec.count(); ++i)
+        {
+            if(i != rec.count() - 1)
+            {
+                str += query.value(i).toString() + ' ';
+            }
+            else
+            {
+                str += query.value(i).toString() + '/';
+            }
+        }
     }
+    str.remove(str.size() - 1, 1);
     return str;
 }
 

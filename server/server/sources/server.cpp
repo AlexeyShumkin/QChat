@@ -75,14 +75,12 @@ void Server::slotReadyRead()
         if(handler->specHandle(str))
         {
             qDebug() << str;
-            str.clear();
-            str.push_back('1');
             sendToClient(str);
         }
         else
         {
             str.clear();
-            str.push_back('2');
+            str += "-1";
             sendToClient(str);
         }
     }

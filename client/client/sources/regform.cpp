@@ -39,12 +39,12 @@ void RegForm::on_buttonBox_accepted()
         auto i = session->getBuffer().toInt();
         switch(i)
         {
-        case 1:
-            emit accepted();
-            break;
-        case 2:
+        case -1:
             QMessageBox::critical(this, tr("error"), tr("login already exists"));
             return;
+        default:
+            emit accepted();
+            break;
         }
     });
 }

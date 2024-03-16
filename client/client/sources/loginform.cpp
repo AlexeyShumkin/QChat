@@ -35,11 +35,11 @@ void LoginForm::on_buttonBox_accepted()
         auto i = session->getBuffer().toInt();
         switch(i)
         {
-        case 1:
-            emit accepted();
-            return;
-        case 2:
+        case -1:
             QMessageBox::critical(this, tr("error"), tr("Invalid login or password"));
+            return;
+        default:
+            emit accepted();
             return;
         }
     });

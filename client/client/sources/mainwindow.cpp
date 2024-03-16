@@ -38,7 +38,6 @@ void MainWindow::on_msgEdit_returnPressed()
 void MainWindow::on_pubButton_clicked()
 {
     session->sendToServer(ui->msgEdit->text());
-
 }
 void MainWindow::on_pvtButton_clicked()
 {

@@ -593,5 +593,4 @@ CMakeFiles/server.dir/sources/connection.cpp.o: \
  /usr/include/x86_64-linux-gnu/qt5/QtSql/qsqlrelationaltablemodel.h \
  /usr/include/x86_64-linux-gnu/qt5/QtSql/qsqlresult.h \
  /usr/include/x86_64-linux-gnu/qt5/QtSql/qsqltablemodel.h \
- /usr/include/x86_64-linux-gnu/qt5/QtSql/qtsqlversion.h \
- /usr/include/x86_64-linux-gnu/qt5/QtCore/QDebug
+ /usr/include/x86_64-linux-gnu/qt5/QtSql/qtsqlversion.h
