@@ -24,17 +24,14 @@ void Server::serverUp(QString& str)
     case SIGNIN:
         setHandler(std::make_unique<SignInHandler>());
         break;
-    case PUB:
-        setHandler(std::make_unique<PubPostHandler>());
+    case POST:
+        setHandler(std::make_unique<PostHandler>());
+        break;
+    case USERS:
+        setHandler(std::make_unique<UsersDisplayHandler>());
         break;
     }
     str = str.mid(str.indexOf('#') + 1);
-}
-
-bool Server::check(QString &str)
-{
-    serverUp(str);
-    return handler->specHandle(str);
 }
 
 void Server::sendToClient(QString str)
@@ -43,7 +40,7 @@ void Server::sendToClient(QString str)
     QDataStream out(&data_, QIODevice::WriteOnly);
     out.setVersion(QDataStream::Qt_5_15);
     out << str;
-    for(auto socket : sockets_)
+    for(auto& socket : sockets_)
     {
         socket->write(data_);
     }
@@ -61,7 +58,7 @@ void Server::incomingConnection(qintptr socketDecriptor)
     connect(socket_, &QTcpSocket::readyRead, this, &Server::slotReadyRead);
     connect(socket_, &QTcpSocket::disconnected, socket_, &QTcpSocket::deleteLater);
     sockets_.push_back(socket_);
-    qDebug() << "client connected" << socketDecriptor;
+    qDebug() << "client connected" << socket_->peerAddress();
 }
 
 void Server::slotReadyRead()
@@ -75,6 +72,7 @@ void Server::slotReadyRead()
         QString str;
         in >> str;
         serverUp(str);
+        qDebug() << str;
         if(handler->specHandle(str))
         {
             qDebug() << str;

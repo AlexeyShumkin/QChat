@@ -20,7 +20,7 @@ public:
 
 signals:
     void regRequested();
-    void accepted(int id);
+    void accepted(int id, QString username);
     void rejected();
 
 private slots:

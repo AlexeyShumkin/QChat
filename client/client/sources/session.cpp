@@ -9,6 +9,11 @@ Session::Session()
     connect(socket, &QTcpSocket::disconnected, socket, &QTcpSocket::deleteLater);
 }
 
+Session::~Session()
+{
+    socket->close();
+}
+
 void Session::sendToServer(QString str)
 {
     data.clear();

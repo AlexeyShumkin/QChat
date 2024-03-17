@@ -9,6 +9,7 @@ class Session : public QTcpSocket
 
 public:
     Session();
+    ~Session();
     void sendToServer(QString str);
     QString getBuffer() const;
 public slots:

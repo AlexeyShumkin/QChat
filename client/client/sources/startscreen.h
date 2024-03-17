@@ -21,13 +21,16 @@ public:
     std::shared_ptr<Session> getSession() const;
     int getUserID() const;
 
+    const QString &getUsername() const;
+
 public slots:
-    void onLoggedIn(int id);
+    void onLoggedIn(int id, QString name);
     void onRejectRequested();
 private:
     Ui::StartScreen *ui;
     std::shared_ptr<Session> session;
     int userID;
+    QString username;
 };
 
 #endif // STARTSCREEN_H

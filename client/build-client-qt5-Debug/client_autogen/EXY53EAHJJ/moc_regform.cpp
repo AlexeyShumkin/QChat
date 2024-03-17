@@ -22,8 +22,8 @@ QT_BEGIN_MOC_NAMESPACE
 QT_WARNING_PUSH
 QT_WARNING_DISABLE_DEPRECATED
 struct qt_meta_stringdata_RegForm_t {
-    QByteArrayData data[9];
-    char stringdata0[112];
+    QByteArrayData data[10];
+    char stringdata0[121];
 };
 #define QT_MOC_LITERAL(idx, ofs, len) \
     Q_STATIC_BYTE_ARRAY_DATA_HEADER_INITIALIZER_WITH_OFFSET(len, \
@@ -37,14 +37,15 @@ QT_MOC_LITERAL(1, 8, 14), // "loginRequested"
 QT_MOC_LITERAL(2, 23, 0), // ""
 QT_MOC_LITERAL(3, 24, 8), // "accepted"
 QT_MOC_LITERAL(4, 33, 2), // "id"
-QT_MOC_LITERAL(5, 36, 8), // "rejected"
-QT_MOC_LITERAL(6, 45, 22), // "on_loginButton_clicked"
-QT_MOC_LITERAL(7, 68, 21), // "on_buttonBox_accepted"
-QT_MOC_LITERAL(8, 90, 21) // "on_buttonBox_rejected"
+QT_MOC_LITERAL(5, 36, 8), // "username"
+QT_MOC_LITERAL(6, 45, 8), // "rejected"
+QT_MOC_LITERAL(7, 54, 22), // "on_loginButton_clicked"
+QT_MOC_LITERAL(8, 77, 21), // "on_buttonBox_accepted"
+QT_MOC_LITERAL(9, 99, 21) // "on_buttonBox_rejected"
 
     },
     "RegForm\0loginRequested\0\0accepted\0id\0"
-    "rejected\0on_loginButton_clicked\0"
+    "username\0rejected\0on_loginButton_clicked\0"
     "on_buttonBox_accepted\0on_buttonBox_rejected"
 };
 #undef QT_MOC_LITERAL
@@ -64,17 +65,17 @@ static const uint qt_meta_data_RegForm[] = {
 
  // signals: name, argc, parameters, tag, flags
        1,    0,   44,    2, 0x06 /* Public */,
-       3,    1,   45,    2, 0x06 /* Public */,
-       5,    0,   48,    2, 0x06 /* Public */,
+       3,    2,   45,    2, 0x06 /* Public */,
+       6,    0,   50,    2, 0x06 /* Public */,
 
  // slots: name, argc, parameters, tag, flags
-       6,    0,   49,    2, 0x08 /* Private */,
-       7,    0,   50,    2, 0x08 /* Private */,
-       8,    0,   51,    2, 0x08 /* Private */,
+       7,    0,   51,    2, 0x08 /* Private */,
+       8,    0,   52,    2, 0x08 /* Private */,
+       9,    0,   53,    2, 0x08 /* Private */,
 
  // signals: parameters
     QMetaType::Void,
-    QMetaType::Void, QMetaType::Int,    4,
+    QMetaType::Void, QMetaType::Int, QMetaType::QString,    4,    5,
     QMetaType::Void,
 
  // slots: parameters
@@ -92,7 +93,7 @@ void RegForm::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, voi
         (void)_t;
         switch (_id) {
         case 0: _t->loginRequested(); break;
-        case 1: _t->accepted((*reinterpret_cast< int(*)>(_a[1]))); break;
+        case 1: _t->accepted((*reinterpret_cast< int(*)>(_a[1])),(*reinterpret_cast< QString(*)>(_a[2]))); break;
         case 2: _t->rejected(); break;
         case 3: _t->on_loginButton_clicked(); break;
         case 4: _t->on_buttonBox_accepted(); break;
@@ -109,7 +110,7 @@ void RegForm::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, voi
             }
         }
         {
-            using _t = void (RegForm::*)(int );
+            using _t = void (RegForm::*)(int , QString );
             if (*reinterpret_cast<_t *>(_a[1]) == static_cast<_t>(&RegForm::accepted)) {
                 *result = 1;
                 return;
@@ -172,9 +173,9 @@ void RegForm::loginRequested()
 }
 
 // SIGNAL 1
-void RegForm::accepted(int _t1)
+void RegForm::accepted(int _t1, QString _t2)
 {
-    void *_a[] = { nullptr, const_cast<void*>(reinterpret_cast<const void*>(std::addressof(_t1))) };
+    void *_a[] = { nullptr, const_cast<void*>(reinterpret_cast<const void*>(std::addressof(_t1))), const_cast<void*>(reinterpret_cast<const void*>(std::addressof(_t2))) };
     QMetaObject::activate(this, &staticMetaObject, 1, _a);
 }
 

@@ -36,15 +36,15 @@ void RegForm::on_buttonBox_accepted()
     QString str = "1#" + ui->loginEdit->text() + ' ' + QString::number(hasher(ui->passwordEdit->text()));
     session->sendToServer(str);
     QTimer::singleShot(1000, this, [=]() {
-        auto id = session->getBuffer().toInt();
-        if(id <= 0)
+        auto respond = session->getBuffer();
+        if(respond == "-1")
         {
             QMessageBox::critical(this, tr("error"), tr("login already exists"));
-            return;
         }
         else
         {
-            emit accepted(id);
+            auto id = respond.toInt();
+            emit accepted(id, ui->loginEdit->text());
         }
     });
 }

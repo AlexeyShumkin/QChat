@@ -24,11 +24,37 @@ bool SignInHandler::specHandle(QString& str)
     return str.size();
 }
 
-bool PubPostHandler::specHandle(QString& str)
+bool PostHandler::specHandle(QString& str)
 {
     QString substr = str.mid(0, str.indexOf(' '));
-    query = "INSERT INTO msgdata(sender_id, content) VALUES('" + substr + "','";
-    substr = str.mid(str.indexOf(' ') + 1);
-    query += substr + "')";
-    return DBHandler::getConnection()->executeQuery(query);
+    query = "SELECT id FROM users WHERE login = '" + substr + "'";
+    substr = DBHandler::getConnection()->getData(query);
+    substr = substr.mid(0, substr.indexOf('\n'));
+    if(str.indexOf('@') == -1)
+    {
+        query = "INSERT INTO msgdata(sender_id, content) VALUES('" + substr + "','";
+        substr = str.mid(str.indexOf(' ') + 1);
+        query += substr + "')";
+        return DBHandler::getConnection()->executeQuery(query);
+    }
+    else
+    {
+        QString sender = substr;
+        substr = str.mid(str.indexOf('@') + 1, str.lastIndexOf('@') - str.indexOf('@') - 1);
+        query = "SELECT id FROM users WHERE login = '" + substr + "'";
+        substr = DBHandler::getConnection()->getData(query);
+        substr = substr.mid(0, substr.indexOf('\n'));
+        query = "INSERT INTO msgdata(sender_id, recipient_id, content) VALUES('" + sender + "','" + substr + "','";
+        substr = str.mid(str.lastIndexOf('@') + 1);
+        query += substr + "')";
+        return DBHandler::getConnection()->executeQuery(query);
+    }
+
+}
+
+bool UsersDisplayHandler::specHandle(QString& str)
+{
+    query = "SELECT login FROM users";
+    str = DBHandler::getConnection()->getData(query);
+    return str.size();
 }

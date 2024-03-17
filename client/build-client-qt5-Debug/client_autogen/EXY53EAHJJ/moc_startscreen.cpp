@@ -22,8 +22,8 @@ QT_BEGIN_MOC_NAMESPACE
 QT_WARNING_PUSH
 QT_WARNING_DISABLE_DEPRECATED
 struct qt_meta_stringdata_StartScreen_t {
-    QByteArrayData data[5];
-    char stringdata0[45];
+    QByteArrayData data[6];
+    char stringdata0[50];
 };
 #define QT_MOC_LITERAL(idx, ofs, len) \
     Q_STATIC_BYTE_ARRAY_DATA_HEADER_INITIALIZER_WITH_OFFSET(len, \
@@ -36,10 +36,12 @@ QT_MOC_LITERAL(0, 0, 11), // "StartScreen"
 QT_MOC_LITERAL(1, 12, 10), // "onLoggedIn"
 QT_MOC_LITERAL(2, 23, 0), // ""
 QT_MOC_LITERAL(3, 24, 2), // "id"
-QT_MOC_LITERAL(4, 27, 17) // "onRejectRequested"
+QT_MOC_LITERAL(4, 27, 4), // "name"
+QT_MOC_LITERAL(5, 32, 17) // "onRejectRequested"
 
     },
-    "StartScreen\0onLoggedIn\0\0id\0onRejectRequested"
+    "StartScreen\0onLoggedIn\0\0id\0name\0"
+    "onRejectRequested"
 };
 #undef QT_MOC_LITERAL
 
@@ -57,11 +59,11 @@ static const uint qt_meta_data_StartScreen[] = {
        0,       // signalCount
 
  // slots: name, argc, parameters, tag, flags
-       1,    1,   24,    2, 0x0a /* Public */,
-       4,    0,   27,    2, 0x0a /* Public */,
+       1,    2,   24,    2, 0x0a /* Public */,
+       5,    0,   29,    2, 0x0a /* Public */,
 
  // slots: parameters
-    QMetaType::Void, QMetaType::Int,    3,
+    QMetaType::Void, QMetaType::Int, QMetaType::QString,    3,    4,
     QMetaType::Void,
 
        0        // eod
@@ -73,7 +75,7 @@ void StartScreen::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id,
         auto *_t = static_cast<StartScreen *>(_o);
         (void)_t;
         switch (_id) {
-        case 0: _t->onLoggedIn((*reinterpret_cast< int(*)>(_a[1]))); break;
+        case 0: _t->onLoggedIn((*reinterpret_cast< int(*)>(_a[1])),(*reinterpret_cast< QString(*)>(_a[2]))); break;
         case 1: _t->onRejectRequested(); break;
         default: ;
         }

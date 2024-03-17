@@ -22,7 +22,13 @@ public:
     bool specHandle(QString& str) override;
 };
 
-class PubPostHandler : public IHandler
+class PostHandler : public IHandler
+{
+public:
+    bool specHandle(QString& str) override;
+};
+
+class UsersDisplayHandler : public IHandler
 {
 public:
     bool specHandle(QString& str) override;

@@ -42,11 +42,10 @@ QString& DBHandler::getData(QString& str)
             }
             else
             {
-                str += query.value(i).toString() + '/';
+                str += query.value(i).toString() + '\n';
             }
         }
     }
-    str.remove(str.size() - 1, 1);
     return str;
 }
 
