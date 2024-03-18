@@ -279,21 +279,6 @@ CMakeFiles/server.dir/sources/main.cpp.o: \
  /usr/include/x86_64-linux-gnu/qt5/QtGui/qkeysequence.h \
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qtabwidget.h \
  /usr/include/x86_64-linux-gnu/qt5/QtGui/qicon.h \
- /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QApplication \
- /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qapplication.h \
- /usr/include/x86_64-linux-gnu/qt5/QtCore/qcoreapplication.h \
- /usr/include/x86_64-linux-gnu/qt5/QtCore/qcoreevent.h \
- /usr/include/x86_64-linux-gnu/qt5/QtCore/qeventloop.h \
- /usr/include/x86_64-linux-gnu/qt5/QtGui/qguiapplication.h \
- /usr/include/x86_64-linux-gnu/qt5/QtGui/qinputmethod.h \
- /usr/include/x86_64-linux-gnu/qt5/QtCore/qlocale.h \
- /usr/include/x86_64-linux-gnu/qt5/QtCore/qvariant.h \
- /usr/include/x86_64-linux-gnu/qt5/QtCore/qmap.h \
- /usr/include/c++/11/variant \
- /usr/include/x86_64-linux-gnu/qt5/QtCore/QLocale \
- /usr/include/x86_64-linux-gnu/qt5/QtCore/qlocale.h \
- /usr/include/x86_64-linux-gnu/qt5/QtCore/QTranslator \
- /usr/include/x86_64-linux-gnu/qt5/QtCore/qtranslator.h \
  /home/awl/projects/QChat/server/server/sources/server.h \
  /usr/include/x86_64-linux-gnu/qt5/QtNetwork/QTcpServer \
  /usr/include/x86_64-linux-gnu/qt5/QtNetwork/qtcpserver.h \
@@ -301,7 +286,11 @@ CMakeFiles/server.dir/sources/main.cpp.o: \
  /usr/include/x86_64-linux-gnu/qt5/QtNetwork/qtnetwork-config.h \
  /usr/include/x86_64-linux-gnu/qt5/QtNetwork/qabstractsocket.h \
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qdebug.h \
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qmap.h \
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qtextstream.h \
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qlocale.h \
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qvariant.h \
+ /usr/include/c++/11/variant \
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qset.h \
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qcontiguouscache.h \
  /usr/include/x86_64-linux-gnu/qt5/QtNetwork/qhostaddress.h \
@@ -314,4 +303,15 @@ CMakeFiles/server.dir/sources/main.cpp.o: \
  /usr/include/x86_64-linux-gnu/qt5/QtSql/QSqlDatabase \
  /usr/include/x86_64-linux-gnu/qt5/QtSql/qsqldatabase.h \
  /usr/include/x86_64-linux-gnu/qt5/QtSql/qtsqlglobal.h \
- /usr/include/x86_64-linux-gnu/qt5/QtSql/qtsql-config.h
+ /usr/include/x86_64-linux-gnu/qt5/QtSql/qtsql-config.h \
+ /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QApplication \
+ /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qapplication.h \
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qcoreapplication.h \
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qcoreevent.h \
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qeventloop.h \
+ /usr/include/x86_64-linux-gnu/qt5/QtGui/qguiapplication.h \
+ /usr/include/x86_64-linux-gnu/qt5/QtGui/qinputmethod.h \
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/QLocale \
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qlocale.h \
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/QTranslator \
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qtranslator.h

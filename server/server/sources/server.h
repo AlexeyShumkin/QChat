@@ -19,10 +19,10 @@ private:
     quint16 nextBlockSize{ 0 };
     enum Commands { SIGNUP = 1, SIGNIN, POST, USERS, SIGNOUT, UPDATE };
     std::unique_ptr<IHandler> handler;
-    bool dataSendFlag{ false };
     void sendToClient(QString str);
     void setHandler(std::unique_ptr<IHandler>&& h);
-
+signals:
+    void clientResponse(QString response);
 public slots:
     void incomingConnection(qintptr socketDecriptor);
     void slotReadyRead();

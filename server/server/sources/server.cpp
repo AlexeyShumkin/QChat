@@ -16,19 +16,13 @@ Server::Server()
 void Server::serverUp(QString& str)
 {
     QString p = str.mid(0, 1);
-    if(dataSendFlag)
-    {
-        dataSendFlag = false;
-    }
     switch(p.toInt())
     {
     case SIGNUP:
         setHandler(std::make_unique<SignUpHandler>());
-        dataSendFlag = true;
         break;
     case SIGNIN:
         setHandler(std::make_unique<SignInHandler>());
-        dataSendFlag = true;
         break;
     case POST:
         setHandler(std::make_unique<PostHandler>());
@@ -56,6 +50,7 @@ void Server::sendToClient(QString str)
     {
         socket->write(data_);
     }
+    emit clientResponse(str);
 }
 
 void Server::setHandler(std::unique_ptr<IHandler>&& h)
