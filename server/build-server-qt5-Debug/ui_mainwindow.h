@@ -37,7 +37,7 @@ public:
     {
         if (MainWindow->objectName().isEmpty())
             MainWindow->setObjectName(QString::fromUtf8("MainWindow"));
-        MainWindow->resize(800, 600);
+        MainWindow->resize(717, 376);
         centralwidget = new QWidget(MainWindow);
         centralwidget->setObjectName(QString::fromUtf8("centralwidget"));
         horizontalLayout = new QHBoxLayout(centralwidget);
@@ -48,16 +48,18 @@ public:
         textBrowser = new QTextBrowser(splitter);
         textBrowser->setObjectName(QString::fromUtf8("textBrowser"));
         splitter->addWidget(textBrowser);
-        listWidget = new QListWidget(splitter);
-        listWidget->setObjectName(QString::fromUtf8("listWidget"));
-        splitter->addWidget(listWidget);
 
         horizontalLayout->addWidget(splitter);
+
+        listWidget = new QListWidget(centralwidget);
+        listWidget->setObjectName(QString::fromUtf8("listWidget"));
+
+        horizontalLayout->addWidget(listWidget);
 
         MainWindow->setCentralWidget(centralwidget);
         menubar = new QMenuBar(MainWindow);
         menubar->setObjectName(QString::fromUtf8("menubar"));
-        menubar->setGeometry(QRect(0, 0, 800, 22));
+        menubar->setGeometry(QRect(0, 0, 717, 22));
         MainWindow->setMenuBar(menubar);
         statusbar = new QStatusBar(MainWindow);
         statusbar->setObjectName(QString::fromUtf8("statusbar"));

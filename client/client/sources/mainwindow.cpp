@@ -133,6 +133,7 @@ void MainWindow::updateChat()
             QTextCursor cursor(doc);
             QStringList parts = respond.split(' ');
             cursor.insertText(respond);
+
             QRegExp privateTag("private");
             QRegExp publicTag("public");
             QTextCharFormat privateFormat;

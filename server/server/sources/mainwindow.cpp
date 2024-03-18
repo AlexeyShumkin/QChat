@@ -1,5 +1,9 @@
 #include "mainwindow.h"
 #include "./ui_mainwindow.h"
+#include <QSqlQuery>
+#include <QDialog>
+#include <QPushButton>
+#include <QListWidgetItem>
 
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
@@ -26,9 +30,19 @@ void MainWindow::updateChat()
                   "FROM msgdata m JOIN users u ON m.sender_id = u.id LEFT JOIN users r ON m.recipient_id = r.id "
                   "ORDER BY sent DESC";
     str = DBHandler::getConnection()->getData(str);
-    QTextDocument *doc = ui->textBrowser->document();
+    QTextDocument* doc = ui->textBrowser->document();
     QTextCursor cursor(doc);
     cursor.insertText(str);
+    QStringList lines = str.split('\n');
+    for(int i = 0; i < lines.size() - 1; ++i)
+    {
+        QString tmp = lines[i].mid(lines[i].indexOf(' ') + 1);
+        tmp = tmp.mid(0, tmp.indexOf(' '));
+        lines[i].insert(lines[i].indexOf(' ') + 1, "->");
+        lines[i].insert(lines[i].indexOf('>') + tmp.size() + 1, ": ");
+    }
+    str = lines.join('\n');
+    ui->textBrowser->setText(str);
     QRegExp privateTag("private");
     QRegExp publicTag("public");
     QTextCharFormat privateFormat;
@@ -49,4 +63,54 @@ void MainWindow::updateChat()
         }
     }
     ui->textBrowser->update();
+    ui->listWidget->clear();
+    str = "SELECT id, login, status FROM users ORDER BY id DESC";
+    str = DBHandler::getConnection()->getData(str);
+    lines = str.split('\n');
+    for(int i = 0; i < lines.size() - 1; ++i)
+    {
+        lines[i].prepend("id:");
+        lines[i].insert(lines[i].indexOf(' ') + 1, " user:  ");
+        lines[i].insert(lines[i].lastIndexOf(' ') + 1, "\t");
+        if(lines[i].indexOf("online") >= 0)
+        {
+            QListWidgetItem *item = new QListWidgetItem(ui->listWidget);
+            item->setText(lines[i]);
+            item->setForeground(QBrush(Qt::darkGreen));
+        }
+        else
+        {
+            QListWidgetItem *item = new QListWidgetItem(ui->listWidget);
+            item->setText(lines[i]);
+            item->setForeground(QBrush(Qt::darkGray));
+        }
+    }
+    ui->listWidget->setCurrentRow(0);
+}
+
+void MainWindow::on_listWidget_itemClicked(QListWidgetItem *item)
+{
+    QString id = item->text();
+    id = id.mid(0, id.indexOf(' '));
+    QDialog* options = new QDialog(this);
+    options->setWindowTitle("options");
+    QVBoxLayout *layout = new QVBoxLayout(options);
+    QPushButton* banButton = new QPushButton("ban", options);
+    QPushButton* disconnectButton = new QPushButton("disconnect", options);
+    connect(banButton, &QPushButton::clicked, this, &MainWindow::on_banButton_clicked);
+    connect(disconnectButton, &QPushButton::clicked, this, &MainWindow::on_disconnectButton_clicked);
+    layout->addWidget(banButton);
+    layout->addWidget(disconnectButton);
+    options->exec();
+
+}
+
+void MainWindow::on_banButton_clicked()
+{
+    qDebug() << "BAAAAAN!";
+}
+
+void MainWindow::on_disconnectButton_clicked()
+{
+    qDebug() << "GOODBYE!";
 }

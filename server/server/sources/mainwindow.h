@@ -2,6 +2,7 @@
 #define MAINWINDOW_H
 
 #include <QMainWindow>
+#include <QListWidgetItem>
 #include "server.h"
 
 QT_BEGIN_NAMESPACE
@@ -17,6 +18,10 @@ public:
     ~MainWindow();
 private slots:
     void updateChat();
+    void on_listWidget_itemClicked(QListWidgetItem *item);
+    void on_banButton_clicked();
+    void on_disconnectButton_clicked();
+
 private:
     Ui::MainWindow *ui;
     std::unique_ptr<Server> server;

@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>800</width>
-    <height>600</height>
+    <width>717</width>
+    <height>376</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -21,8 +21,10 @@
        <enum>Qt::Horizontal</enum>
       </property>
       <widget class="QTextBrowser" name="textBrowser"/>
-      <widget class="QListWidget" name="listWidget"/>
      </widget>
+    </item>
+    <item>
+     <widget class="QListWidget" name="listWidget"/>
     </item>
    </layout>
   </widget>
@@ -31,7 +33,7 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>800</width>
+     <width>717</width>
      <height>22</height>
     </rect>
    </property>

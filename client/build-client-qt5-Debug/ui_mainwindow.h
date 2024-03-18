@@ -48,6 +48,7 @@ public:
         centralwidget = new QWidget(MainWindow);
         centralwidget->setObjectName(QString::fromUtf8("centralwidget"));
         verticalLayout = new QVBoxLayout(centralwidget);
+        verticalLayout->setSpacing(6);
         verticalLayout->setObjectName(QString::fromUtf8("verticalLayout"));
         horizontalLayout = new QHBoxLayout();
         horizontalLayout->setObjectName(QString::fromUtf8("horizontalLayout"));

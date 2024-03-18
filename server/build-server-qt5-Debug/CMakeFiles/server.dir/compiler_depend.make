@@ -329,6 +329,29 @@ CMakeFiles/server.dir/server_autogen/mocs_compilation.cpp.o: server_autogen/mocs
   /usr/include/x86_64-linux-gnu/qt5/QtGui/qkeysequence.h \
   /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qtabwidget.h \
   /usr/include/x86_64-linux-gnu/qt5/QtGui/qicon.h \
+  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QListWidgetItem \
+  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qlistwidget.h \
+  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qlistview.h \
+  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qabstractitemview.h \
+  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qabstractscrollarea.h \
+  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qframe.h \
+  /usr/include/x86_64-linux-gnu/qt5/QtCore/qabstractitemmodel.h \
+  /usr/include/x86_64-linux-gnu/qt5/QtCore/qvariant.h \
+  /usr/include/x86_64-linux-gnu/qt5/QtCore/qmap.h \
+  /usr/include/c++/11/variant \
+  /usr/include/x86_64-linux-gnu/qt5/QtCore/qitemselectionmodel.h \
+  /usr/include/x86_64-linux-gnu/qt5/QtCore/qset.h \
+  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qabstractitemdelegate.h \
+  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qstyleoption.h \
+  /usr/include/x86_64-linux-gnu/qt5/QtCore/qlocale.h \
+  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qabstractspinbox.h \
+  /usr/include/x86_64-linux-gnu/qt5/QtGui/qvalidator.h \
+  /usr/include/x86_64-linux-gnu/qt5/QtCore/qregularexpression.h \
+  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qslider.h \
+  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qabstractslider.h \
+  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qstyle.h \
+  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qtabbar.h \
+  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qrubberband.h \
   /home/awl/projects/QChat/server/server/sources/server.h \
   /usr/include/x86_64-linux-gnu/qt5/QtNetwork/QTcpServer \
   /usr/include/x86_64-linux-gnu/qt5/QtNetwork/qtcpserver.h \
@@ -336,12 +359,7 @@ CMakeFiles/server.dir/server_autogen/mocs_compilation.cpp.o: server_autogen/mocs
   /usr/include/x86_64-linux-gnu/qt5/QtNetwork/qtnetwork-config.h \
   /usr/include/x86_64-linux-gnu/qt5/QtNetwork/qabstractsocket.h \
   /usr/include/x86_64-linux-gnu/qt5/QtCore/qdebug.h \
-  /usr/include/x86_64-linux-gnu/qt5/QtCore/qmap.h \
   /usr/include/x86_64-linux-gnu/qt5/QtCore/qtextstream.h \
-  /usr/include/x86_64-linux-gnu/qt5/QtCore/qlocale.h \
-  /usr/include/x86_64-linux-gnu/qt5/QtCore/qvariant.h \
-  /usr/include/c++/11/variant \
-  /usr/include/x86_64-linux-gnu/qt5/QtCore/qset.h \
   /usr/include/x86_64-linux-gnu/qt5/QtCore/qcontiguouscache.h \
   /usr/include/x86_64-linux-gnu/qt5/QtNetwork/qhostaddress.h \
   /usr/include/x86_64-linux-gnu/qt5/QtNetwork/QTcpSocket \
@@ -354,6 +372,9 @@ CMakeFiles/server.dir/server_autogen/mocs_compilation.cpp.o: server_autogen/mocs
   /usr/include/x86_64-linux-gnu/qt5/QtSql/qsqldatabase.h \
   /usr/include/x86_64-linux-gnu/qt5/QtSql/qtsqlglobal.h \
   /usr/include/x86_64-linux-gnu/qt5/QtSql/qtsql-config.h \
+  /usr/include/x86_64-linux-gnu/qt5/QtSql/QSqlQuery \
+  /usr/include/x86_64-linux-gnu/qt5/QtSql/qsqlquery.h \
+  /usr/include/x86_64-linux-gnu/qt5/QtSql/qsqldatabase.h \
   server_autogen/EXY53EAHJJ/moc_server.cpp
 
 CMakeFiles/server.dir/sources/connection.cpp.o: /home/awl/projects/QChat/server/server/sources/connection.cpp \
@@ -592,6 +613,9 @@ CMakeFiles/server.dir/sources/connection.cpp.o: /home/awl/projects/QChat/server/
   /usr/include/x86_64-linux-gnu/qt5/QtCore/qstringliteral.h \
   /usr/include/x86_64-linux-gnu/qt5/QtCore/qstringalgorithms.h \
   /usr/include/x86_64-linux-gnu/qt5/QtCore/qstringview.h \
+  /usr/include/x86_64-linux-gnu/qt5/QtSql/QSqlQuery \
+  /usr/include/x86_64-linux-gnu/qt5/QtSql/qsqlquery.h \
+  /usr/include/x86_64-linux-gnu/qt5/QtSql/qsqldatabase.h \
   /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QMessageBox \
   /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qmessagebox.h \
   /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qtwidgetsglobal.h \
@@ -972,8 +996,6 @@ CMakeFiles/server.dir/sources/connection.cpp.o: /home/awl/projects/QChat/server/
   /usr/include/x86_64-linux-gnu/qt5/QtSql/qsqlfield.h \
   /usr/include/x86_64-linux-gnu/qt5/QtSql/qsqlindex.h \
   /usr/include/x86_64-linux-gnu/qt5/QtSql/qsqlrecord.h \
-  /usr/include/x86_64-linux-gnu/qt5/QtSql/qsqlquery.h \
-  /usr/include/x86_64-linux-gnu/qt5/QtSql/qsqldatabase.h \
   /usr/include/x86_64-linux-gnu/qt5/QtSql/qsqlquerymodel.h \
   /usr/include/x86_64-linux-gnu/qt5/QtSql/qsqlrecord.h \
   /usr/include/x86_64-linux-gnu/qt5/QtSql/qsqlrelationaldelegate.h \
@@ -1243,6 +1265,9 @@ CMakeFiles/server.dir/sources/handler.cpp.o: /home/awl/projects/QChat/server/ser
   /usr/include/x86_64-linux-gnu/qt5/QtSql/qtsqlglobal.h \
   /usr/include/x86_64-linux-gnu/qt5/QtSql/qtsql-config.h \
   /usr/include/x86_64-linux-gnu/qt5/QtCore/qstring.h \
+  /usr/include/x86_64-linux-gnu/qt5/QtSql/QSqlQuery \
+  /usr/include/x86_64-linux-gnu/qt5/QtSql/qsqlquery.h \
+  /usr/include/x86_64-linux-gnu/qt5/QtSql/qsqldatabase.h \
   /usr/include/x86_64-linux-gnu/qt5/QtCore/QDebug \
   /usr/include/x86_64-linux-gnu/qt5/QtCore/qdebug.h \
   /usr/include/x86_64-linux-gnu/qt5/QtCore/qalgorithms.h \
@@ -1640,6 +1665,29 @@ CMakeFiles/server.dir/sources/main.cpp.o: /home/awl/projects/QChat/server/server
   /usr/include/x86_64-linux-gnu/qt5/QtGui/qkeysequence.h \
   /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qtabwidget.h \
   /usr/include/x86_64-linux-gnu/qt5/QtGui/qicon.h \
+  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QListWidgetItem \
+  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qlistwidget.h \
+  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qlistview.h \
+  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qabstractitemview.h \
+  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qabstractscrollarea.h \
+  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qframe.h \
+  /usr/include/x86_64-linux-gnu/qt5/QtCore/qabstractitemmodel.h \
+  /usr/include/x86_64-linux-gnu/qt5/QtCore/qvariant.h \
+  /usr/include/x86_64-linux-gnu/qt5/QtCore/qmap.h \
+  /usr/include/c++/11/variant \
+  /usr/include/x86_64-linux-gnu/qt5/QtCore/qitemselectionmodel.h \
+  /usr/include/x86_64-linux-gnu/qt5/QtCore/qset.h \
+  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qabstractitemdelegate.h \
+  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qstyleoption.h \
+  /usr/include/x86_64-linux-gnu/qt5/QtCore/qlocale.h \
+  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qabstractspinbox.h \
+  /usr/include/x86_64-linux-gnu/qt5/QtGui/qvalidator.h \
+  /usr/include/x86_64-linux-gnu/qt5/QtCore/qregularexpression.h \
+  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qslider.h \
+  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qabstractslider.h \
+  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qstyle.h \
+  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qtabbar.h \
+  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qrubberband.h \
   /home/awl/projects/QChat/server/server/sources/server.h \
   /usr/include/x86_64-linux-gnu/qt5/QtNetwork/QTcpServer \
   /usr/include/x86_64-linux-gnu/qt5/QtNetwork/qtcpserver.h \
@@ -1647,12 +1695,7 @@ CMakeFiles/server.dir/sources/main.cpp.o: /home/awl/projects/QChat/server/server
   /usr/include/x86_64-linux-gnu/qt5/QtNetwork/qtnetwork-config.h \
   /usr/include/x86_64-linux-gnu/qt5/QtNetwork/qabstractsocket.h \
   /usr/include/x86_64-linux-gnu/qt5/QtCore/qdebug.h \
-  /usr/include/x86_64-linux-gnu/qt5/QtCore/qmap.h \
   /usr/include/x86_64-linux-gnu/qt5/QtCore/qtextstream.h \
-  /usr/include/x86_64-linux-gnu/qt5/QtCore/qlocale.h \
-  /usr/include/x86_64-linux-gnu/qt5/QtCore/qvariant.h \
-  /usr/include/c++/11/variant \
-  /usr/include/x86_64-linux-gnu/qt5/QtCore/qset.h \
   /usr/include/x86_64-linux-gnu/qt5/QtCore/qcontiguouscache.h \
   /usr/include/x86_64-linux-gnu/qt5/QtNetwork/qhostaddress.h \
   /usr/include/x86_64-linux-gnu/qt5/QtNetwork/QTcpSocket \
@@ -1665,6 +1708,9 @@ CMakeFiles/server.dir/sources/main.cpp.o: /home/awl/projects/QChat/server/server
   /usr/include/x86_64-linux-gnu/qt5/QtSql/qsqldatabase.h \
   /usr/include/x86_64-linux-gnu/qt5/QtSql/qtsqlglobal.h \
   /usr/include/x86_64-linux-gnu/qt5/QtSql/qtsql-config.h \
+  /usr/include/x86_64-linux-gnu/qt5/QtSql/QSqlQuery \
+  /usr/include/x86_64-linux-gnu/qt5/QtSql/qsqlquery.h \
+  /usr/include/x86_64-linux-gnu/qt5/QtSql/qsqldatabase.h \
   /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QApplication \
   /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qapplication.h \
   /usr/include/x86_64-linux-gnu/qt5/QtCore/qcoreapplication.h \
@@ -2004,6 +2050,29 @@ CMakeFiles/server.dir/sources/mainwindow.cpp.o: /home/awl/projects/QChat/server/
   /usr/include/x86_64-linux-gnu/qt5/QtGui/qkeysequence.h \
   /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qtabwidget.h \
   /usr/include/x86_64-linux-gnu/qt5/QtGui/qicon.h \
+  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QListWidgetItem \
+  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qlistwidget.h \
+  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qlistview.h \
+  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qabstractitemview.h \
+  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qabstractscrollarea.h \
+  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qframe.h \
+  /usr/include/x86_64-linux-gnu/qt5/QtCore/qabstractitemmodel.h \
+  /usr/include/x86_64-linux-gnu/qt5/QtCore/qvariant.h \
+  /usr/include/x86_64-linux-gnu/qt5/QtCore/qmap.h \
+  /usr/include/c++/11/variant \
+  /usr/include/x86_64-linux-gnu/qt5/QtCore/qitemselectionmodel.h \
+  /usr/include/x86_64-linux-gnu/qt5/QtCore/qset.h \
+  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qabstractitemdelegate.h \
+  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qstyleoption.h \
+  /usr/include/x86_64-linux-gnu/qt5/QtCore/qlocale.h \
+  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qabstractspinbox.h \
+  /usr/include/x86_64-linux-gnu/qt5/QtGui/qvalidator.h \
+  /usr/include/x86_64-linux-gnu/qt5/QtCore/qregularexpression.h \
+  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qslider.h \
+  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qabstractslider.h \
+  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qstyle.h \
+  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qtabbar.h \
+  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qrubberband.h \
   /home/awl/projects/QChat/server/server/sources/server.h \
   /usr/include/x86_64-linux-gnu/qt5/QtNetwork/QTcpServer \
   /usr/include/x86_64-linux-gnu/qt5/QtNetwork/qtcpserver.h \
@@ -2011,12 +2080,7 @@ CMakeFiles/server.dir/sources/mainwindow.cpp.o: /home/awl/projects/QChat/server/
   /usr/include/x86_64-linux-gnu/qt5/QtNetwork/qtnetwork-config.h \
   /usr/include/x86_64-linux-gnu/qt5/QtNetwork/qabstractsocket.h \
   /usr/include/x86_64-linux-gnu/qt5/QtCore/qdebug.h \
-  /usr/include/x86_64-linux-gnu/qt5/QtCore/qmap.h \
   /usr/include/x86_64-linux-gnu/qt5/QtCore/qtextstream.h \
-  /usr/include/x86_64-linux-gnu/qt5/QtCore/qlocale.h \
-  /usr/include/x86_64-linux-gnu/qt5/QtCore/qvariant.h \
-  /usr/include/c++/11/variant \
-  /usr/include/x86_64-linux-gnu/qt5/QtCore/qset.h \
   /usr/include/x86_64-linux-gnu/qt5/QtCore/qcontiguouscache.h \
   /usr/include/x86_64-linux-gnu/qt5/QtNetwork/qhostaddress.h \
   /usr/include/x86_64-linux-gnu/qt5/QtNetwork/QTcpSocket \
@@ -2029,6 +2093,9 @@ CMakeFiles/server.dir/sources/mainwindow.cpp.o: /home/awl/projects/QChat/server/
   /usr/include/x86_64-linux-gnu/qt5/QtSql/qsqldatabase.h \
   /usr/include/x86_64-linux-gnu/qt5/QtSql/qtsqlglobal.h \
   /usr/include/x86_64-linux-gnu/qt5/QtSql/qtsql-config.h \
+  /usr/include/x86_64-linux-gnu/qt5/QtSql/QSqlQuery \
+  /usr/include/x86_64-linux-gnu/qt5/QtSql/qsqlquery.h \
+  /usr/include/x86_64-linux-gnu/qt5/QtSql/qsqldatabase.h \
   ui_mainwindow.h \
   /usr/include/x86_64-linux-gnu/qt5/QtCore/QVariant \
   /usr/include/x86_64-linux-gnu/qt5/QtCore/qvariant.h \
@@ -2046,23 +2113,6 @@ CMakeFiles/server.dir/sources/mainwindow.cpp.o: /home/awl/projects/QChat/server/
   /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qboxlayout.h \
   /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qgridlayout.h \
   /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QListWidget \
-  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qlistwidget.h \
-  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qlistview.h \
-  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qabstractitemview.h \
-  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qabstractscrollarea.h \
-  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qframe.h \
-  /usr/include/x86_64-linux-gnu/qt5/QtCore/qabstractitemmodel.h \
-  /usr/include/x86_64-linux-gnu/qt5/QtCore/qitemselectionmodel.h \
-  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qabstractitemdelegate.h \
-  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qstyleoption.h \
-  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qabstractspinbox.h \
-  /usr/include/x86_64-linux-gnu/qt5/QtGui/qvalidator.h \
-  /usr/include/x86_64-linux-gnu/qt5/QtCore/qregularexpression.h \
-  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qslider.h \
-  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qabstractslider.h \
-  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qstyle.h \
-  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qtabbar.h \
-  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qrubberband.h \
   /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QMainWindow \
   /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QMenuBar \
   /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qmenubar.h \
@@ -2083,7 +2133,12 @@ CMakeFiles/server.dir/sources/mainwindow.cpp.o: /home/awl/projects/QChat/server/
   /usr/include/x86_64-linux-gnu/qt5/QtGui/qtextformat.h \
   /usr/include/x86_64-linux-gnu/qt5/QtGui/qpen.h \
   /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QWidget \
-  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qwidget.h
+  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qwidget.h \
+  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QDialog \
+  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qdialog.h \
+  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QPushButton \
+  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qpushbutton.h \
+  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qabstractbutton.h
 
 CMakeFiles/server.dir/sources/server.cpp.o: /home/awl/projects/QChat/server/server/sources/server.cpp \
   /usr/include/stdc-predef.h \
@@ -2401,6 +2456,9 @@ CMakeFiles/server.dir/sources/server.cpp.o: /home/awl/projects/QChat/server/serv
   /usr/include/x86_64-linux-gnu/qt5/QtSql/qsqldatabase.h \
   /usr/include/x86_64-linux-gnu/qt5/QtSql/qtsqlglobal.h \
   /usr/include/x86_64-linux-gnu/qt5/QtSql/qtsql-config.h \
+  /usr/include/x86_64-linux-gnu/qt5/QtSql/QSqlQuery \
+  /usr/include/x86_64-linux-gnu/qt5/QtSql/qsqlquery.h \
+  /usr/include/x86_64-linux-gnu/qt5/QtSql/qsqldatabase.h \
   /usr/include/x86_64-linux-gnu/qt5/QtCore/QDataStream \
   /usr/include/x86_64-linux-gnu/qt5/QtCore/qdatastream.h
 
@@ -2408,6 +2466,10 @@ CMakeFiles/server.dir/sources/server.cpp.o: /home/awl/projects/QChat/server/serv
 /usr/include/x86_64-linux-gnu/qt5/QtCore/QDataStream:
 
 /home/awl/projects/QChat/server/server/sources/server.cpp:
+
+/usr/include/x86_64-linux-gnu/qt5/QtWidgets/qabstractbutton.h:
+
+/usr/include/x86_64-linux-gnu/qt5/QtWidgets/QDialog:
 
 /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QWidget:
 
@@ -2465,13 +2527,13 @@ ui_mainwindow.h:
 
 /usr/include/x86_64-linux-gnu/qt5/QtSql/qsqltablemodel.h:
 
-/usr/include/x86_64-linux-gnu/qt5/QtWidgets/qabstractitemview.h:
+/usr/include/x86_64-linux-gnu/qt5/QtSql/qsqlerror.h:
 
-/usr/include/x86_64-linux-gnu/qt5/QtWidgets/qstyle.h:
+/usr/include/x86_64-linux-gnu/qt5/QtSql/qsqldriverplugin.h:
 
-/usr/include/x86_64-linux-gnu/qt5/QtWidgets/qabstractslider.h:
+/usr/include/x86_64-linux-gnu/qt5/QtSql/qsqldriver.h:
 
-/usr/include/x86_64-linux-gnu/qt5/QtGui/qvalidator.h:
+/usr/include/x86_64-linux-gnu/qt5/QtCore/qtcoreversion.h:
 
 /usr/include/x86_64-linux-gnu/qt5/QtCore/qstringalgorithms.h:
 
@@ -2480,6 +2542,10 @@ ui_mainwindow.h:
 /usr/include/c++/11/pstl/glue_algorithm_defs.h:
 
 /usr/include/c++/11/utility:
+
+/usr/include/x86_64-linux-gnu/qt5/QtCore/qxmlstream.h:
+
+/usr/include/c++/11/bits/ios_base.h:
 
 /usr/include/c++/11/bits/basic_string.tcc:
 
@@ -2549,9 +2615,9 @@ ui_mainwindow.h:
 
 /usr/include/x86_64-linux-gnu/qt5/QtCore/qmargins.h:
 
-/usr/include/x86_64-linux-gnu/qt5/QtWidgets/qlistview.h:
+/usr/include/x86_64-linux-gnu/qt5/QtSql/qsqlrecord.h:
 
-/usr/include/x86_64-linux-gnu/qt5/QtCore/qflags.h:
+/usr/include/x86_64-linux-gnu/qt5/QtCore/qgenericatomic.h:
 
 /usr/include/c++/11/string_view:
 
@@ -2590,6 +2656,10 @@ ui_mainwindow.h:
 /usr/include/c++/11/cctype:
 
 /usr/include/c++/11/unordered_map:
+
+/usr/include/x86_64-linux-gnu/qt5/QtCore/QDeadlineTimer:
+
+/usr/include/c++/11/functional:
 
 /usr/include/x86_64-linux-gnu/c++/11/bits/c++locale.h:
 
@@ -2631,6 +2701,10 @@ ui_mainwindow.h:
 
 /usr/include/x86_64-linux-gnu/qt5/QtCore/qstringview.h:
 
+/usr/include/x86_64-linux-gnu/qt5/QtWidgets/qitemdelegate.h:
+
+/usr/include/x86_64-linux-gnu/qt5/QtCore/qiterator.h:
+
 /usr/include/x86_64-linux-gnu/bits/types/error_t.h:
 
 /usr/include/x86_64-linux-gnu/qt5/QtCore/qprocessordetection.h:
@@ -2659,8 +2733,6 @@ ui_mainwindow.h:
 
 /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qmainwindow.h:
 
-/usr/include/c++/11/bits/atomic_lockfree_defines.h:
-
 /usr/include/x86_64-linux-gnu/qt5/QtCore/qatomic.h:
 
 /usr/include/c++/11/bits/shared_ptr_atomic.h:
@@ -2668,10 +2740,6 @@ ui_mainwindow.h:
 /usr/include/c++/11/bits/nested_exception.h:
 
 /usr/include/x86_64-linux-gnu/qt5/QtCore/qbasicatomic.h:
-
-/usr/include/x86_64-linux-gnu/qt5/QtWidgets/qtabbar.h:
-
-/usr/include/x86_64-linux-gnu/bits/typesizes.h:
 
 /usr/include/c++/11/bits/predefined_ops.h:
 
@@ -2692,6 +2760,10 @@ ui_mainwindow.h:
 /usr/include/x86_64-linux-gnu/qt5/QtGui/qregion.h:
 
 /usr/include/c++/11/bits/stl_uninitialized.h:
+
+/usr/include/x86_64-linux-gnu/qt5/QtCore/qflags.h:
+
+/usr/include/x86_64-linux-gnu/qt5/QtWidgets/qlistview.h:
 
 /usr/include/c++/11/bits/streambuf.tcc:
 
@@ -2714,6 +2786,10 @@ ui_mainwindow.h:
 /usr/include/c++/11/ext/alloc_traits.h:
 
 /usr/include/x86_64-linux-gnu/bits/sched.h:
+
+/usr/include/x86_64-linux-gnu/qt5/QtSql/qsqlquerymodel.h:
+
+/home/awl/projects/QChat/server/server/sources/mainwindow.h:
 
 /usr/include/x86_64-linux-gnu/qt5/QtCore/qcbormap.h:
 
@@ -2746,6 +2822,10 @@ ui_mainwindow.h:
 /usr/include/c++/11/ext/numeric_traits.h:
 
 /usr/include/c++/11/bits/uses_allocator.h:
+
+/usr/include/x86_64-linux-gnu/qt5/QtCore/qwineventnotifier.h:
+
+/usr/include/c++/11/bits/unique_lock.h:
 
 /usr/include/c++/11/memory:
 
@@ -2825,10 +2905,6 @@ ui_mainwindow.h:
 
 /usr/include/c++/11/tuple:
 
-/usr/include/x86_64-linux-gnu/qt5/QtCore/qiterator.h:
-
-/usr/include/x86_64-linux-gnu/qt5/QtWidgets/qitemdelegate.h:
-
 /usr/include/c++/11/type_traits:
 
 /usr/include/errno.h:
@@ -2847,6 +2923,8 @@ ui_mainwindow.h:
 
 /usr/include/x86_64-linux-gnu/bits/time64.h:
 
+/usr/include/x86_64-linux-gnu/qt5/QtWidgets/QPushButton:
+
 /usr/include/c++/11/iosfwd:
 
 /usr/include/c++/11/initializer_list:
@@ -2860,6 +2938,8 @@ ui_mainwindow.h:
 /usr/include/x86_64-linux-gnu/qt5/QtCore/qatomic_cxx11.h:
 
 /usr/include/x86_64-linux-gnu/qt5/QtCore/qpair.h:
+
+/usr/include/x86_64-linux-gnu/qt5/QtWidgets/qpushbutton.h:
 
 /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qabstractspinbox.h:
 
@@ -2888,12 +2968,6 @@ ui_mainwindow.h:
 /usr/include/c++/11/bits/stl_iterator.h:
 
 /usr/include/x86_64-linux-gnu/bits/struct_mutex.h:
-
-/usr/include/x86_64-linux-gnu/qt5/QtWidgets/qframe.h:
-
-/usr/include/c++/11/bits/range_access.h:
-
-/usr/include/x86_64-linux-gnu/bits/stdint-intn.h:
 
 /usr/include/x86_64-linux-gnu/qt5/QtCore/qcalendar.h:
 
@@ -2977,6 +3051,10 @@ ui_mainwindow.h:
 
 /usr/include/wchar.h:
 
+/usr/include/c++/11/bits/atomic_lockfree_defines.h:
+
+/usr/include/x86_64-linux-gnu/qt5/QtSql/QSqlQuery:
+
 /usr/include/locale.h:
 
 /usr/include/c++/11/bits/memoryfwd.h:
@@ -2994,6 +3072,10 @@ ui_mainwindow.h:
 /usr/include/x86_64-linux-gnu/bits/floatn-common.h:
 
 /usr/include/x86_64-linux-gnu/bits/types/wint_t.h:
+
+/usr/include/x86_64-linux-gnu/bits/typesizes.h:
+
+/usr/include/x86_64-linux-gnu/qt5/QtWidgets/qtabbar.h:
 
 /usr/include/x86_64-linux-gnu/qt5/QtCore/qmimedata.h:
 
@@ -3275,9 +3357,63 @@ server_autogen/EXY53EAHJJ/moc_mainwindow.cpp:
 
 /usr/include/x86_64-linux-gnu/qt5/QtGui/qicon.h:
 
-/home/awl/projects/QChat/server/server/sources/server.h:
+/usr/include/x86_64-linux-gnu/qt5/QtCore/qvariant.h:
+
+/usr/include/x86_64-linux-gnu/qt5/QtCore/qtemporaryfile.h:
+
+/usr/include/x86_64-linux-gnu/qt5/QtWidgets/qabstractitemview.h:
+
+/usr/include/x86_64-linux-gnu/bits/pthread_stack_min-dynamic.h:
+
+/usr/include/x86_64-linux-gnu/qt5/QtCore/qsharedmemory.h:
+
+/home/awl/projects/QChat/server/server/sources/mainwindow.cpp:
+
+/usr/include/x86_64-linux-gnu/qt5/QtCore/qidentityproxymodel.h:
+
+/usr/include/c++/11/bits/range_access.h:
+
+/usr/include/x86_64-linux-gnu/bits/stdint-intn.h:
+
+/usr/include/x86_64-linux-gnu/qt5/QtWidgets/qframe.h:
+
+/usr/include/x86_64-linux-gnu/qt5/QtCore/qhistorystate.h:
+
+/usr/include/x86_64-linux-gnu/qt5/QtCore/qabstractitemmodel.h:
+
+/usr/include/x86_64-linux-gnu/qt5/QtCore/qmap.h:
+
+/usr/include/x86_64-linux-gnu/qt5/QtSql/qsqlrelationaldelegate.h:
+
+/usr/include/c++/11/variant:
+
+/usr/include/x86_64-linux-gnu/qt5/QtCore/qset.h:
+
+/usr/include/x86_64-linux-gnu/qt5/QtGui/qtextcursor.h:
+
+/usr/include/x86_64-linux-gnu/bits/timesize.h:
+
+/usr/include/x86_64-linux-gnu/qt5/QtWidgets/qabstractscrollarea.h:
+
+/usr/include/x86_64-linux-gnu/qt5/QtWidgets/qabstractitemdelegate.h:
+
+/usr/include/x86_64-linux-gnu/qt5/QtWidgets/qstyleoption.h:
+
+/usr/include/endian.h:
+
+/usr/include/c++/11/bits/cpp_type_traits.h:
+
+/usr/include/x86_64-linux-gnu/qt5/QtCore/qlocale.h:
+
+/usr/include/x86_64-linux-gnu/qt5/QtGui/qvalidator.h:
+
+/usr/include/x86_64-linux-gnu/qt5/QtWidgets/qabstractslider.h:
 
 /usr/include/x86_64-linux-gnu/qt5/QtNetwork/QTcpServer:
+
+/usr/include/x86_64-linux-gnu/qt5/QtWidgets/qstyle.h:
+
+/home/awl/projects/QChat/server/server/sources/server.h:
 
 /usr/include/x86_64-linux-gnu/qt5/QtNetwork/qtnetworkglobal.h:
 
@@ -3287,27 +3423,9 @@ server_autogen/EXY53EAHJJ/moc_mainwindow.cpp:
 
 /usr/include/x86_64-linux-gnu/qt5/QtCore/qarraydataops.h:
 
-/usr/include/x86_64-linux-gnu/qt5/QtCore/qmap.h:
-
 /usr/include/x86_64-linux-gnu/qt5/QtCore/qtextstream.h:
 
 /usr/include/x86_64-linux-gnu/qt5/QtCore/qstatemachine.h:
-
-/usr/include/endian.h:
-
-/usr/include/c++/11/bits/cpp_type_traits.h:
-
-/usr/include/x86_64-linux-gnu/qt5/QtCore/qlocale.h:
-
-/usr/include/x86_64-linux-gnu/qt5/QtCore/qvariant.h:
-
-/usr/include/x86_64-linux-gnu/qt5/QtCore/qtemporaryfile.h:
-
-/usr/include/x86_64-linux-gnu/qt5/QtSql/qsqlrelationaldelegate.h:
-
-/usr/include/c++/11/variant:
-
-/usr/include/x86_64-linux-gnu/qt5/QtCore/qset.h:
 
 /usr/include/x86_64-linux-gnu/qt5/QtCore/qpointer.h:
 
@@ -3320,10 +3438,6 @@ server_autogen/EXY53EAHJJ/moc_mainwindow.cpp:
 /usr/include/c++/11/tr1/riemann_zeta.tcc:
 
 server_autogen/EXY53EAHJJ/moc_server.cpp:
-
-/home/awl/projects/QChat/server/server/sources/mainwindow.h:
-
-/usr/include/x86_64-linux-gnu/qt5/QtSql/qsqlquerymodel.h:
 
 /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QMessageBox:
 
@@ -3346,10 +3460,6 @@ server_autogen/EXY53EAHJJ/moc_server.cpp:
 /usr/include/x86_64-linux-gnu/qt5/QtCore/QtCore:
 
 /usr/include/x86_64-linux-gnu/qt5/QtCore/qeventloop.h:
-
-/usr/include/x86_64-linux-gnu/qt5/QtCore/qhistorystate.h:
-
-/usr/include/x86_64-linux-gnu/qt5/QtCore/qabstractitemmodel.h:
 
 /usr/include/c++/11/bits/exception.h:
 
@@ -3443,13 +3553,11 @@ server_autogen/EXY53EAHJJ/moc_server.cpp:
 
 /usr/include/c++/11/tr1/poly_laguerre.tcc:
 
-/home/awl/projects/QChat/server/server/sources/mainwindow.cpp:
-
-/usr/include/x86_64-linux-gnu/qt5/QtCore/qidentityproxymodel.h:
-
 /usr/include/x86_64-linux-gnu/qt5/QtCore/qisenum.h:
 
 /usr/include/x86_64-linux-gnu/qt5/QtCore/qjsonarray.h:
+
+/usr/include/x86_64-linux-gnu/qt5/QtWidgets/QListWidgetItem:
 
 /usr/include/x86_64-linux-gnu/qt5/QtCore/qjsondocument.h:
 
@@ -3471,8 +3579,6 @@ server_autogen/EXY53EAHJJ/moc_server.cpp:
 
 /usr/include/c++/11/bits/specfun.h:
 
-/usr/include/x86_64-linux-gnu/qt5/QtSql/qsqldriverplugin.h:
-
 /usr/include/c++/11/tr1/special_function_util.h:
 
 /usr/include/x86_64-linux-gnu/qt5/QtCore/qnamespace.h:
@@ -3482,8 +3588,6 @@ server_autogen/EXY53EAHJJ/moc_server.cpp:
 /usr/include/x86_64-linux-gnu/c++/11/bits/error_constants.h:
 
 /usr/include/c++/11/tr1/ell_integral.tcc:
-
-/usr/include/x86_64-linux-gnu/qt5/QtSql/qsqldriver.h:
 
 /usr/include/c++/11/tr1/exp_integral.tcc:
 
@@ -3533,10 +3637,6 @@ server_autogen/EXY53EAHJJ/moc_server.cpp:
 
 /usr/include/x86_64-linux-gnu/qt5/QtCore/qscopeguard.h:
 
-/usr/include/x86_64-linux-gnu/bits/pthread_stack_min-dynamic.h:
-
-/usr/include/x86_64-linux-gnu/qt5/QtCore/qsharedmemory.h:
-
 /usr/include/x86_64-linux-gnu/qt5/QtCore/qsignaltransition.h:
 
 /usr/include/x86_64-linux-gnu/qt5/QtCore/qsortfilterproxymodel.h:
@@ -3564,33 +3664,3 @@ server_autogen/EXY53EAHJJ/moc_server.cpp:
 /usr/include/x86_64-linux-gnu/qt5/QtCore/qurlquery.h:
 
 /usr/include/x86_64-linux-gnu/qt5/QtCore/qwaitcondition.h:
-
-/usr/include/c++/11/functional:
-
-/usr/include/x86_64-linux-gnu/qt5/QtCore/QDeadlineTimer:
-
-/usr/include/c++/11/bits/unique_lock.h:
-
-/usr/include/x86_64-linux-gnu/qt5/QtCore/qwineventnotifier.h:
-
-/usr/include/c++/11/bits/ios_base.h:
-
-/usr/include/x86_64-linux-gnu/qt5/QtCore/qxmlstream.h:
-
-/usr/include/x86_64-linux-gnu/qt5/QtCore/qtcoreversion.h:
-
-/usr/include/x86_64-linux-gnu/qt5/QtSql/qsqlerror.h:
-
-/usr/include/x86_64-linux-gnu/qt5/QtCore/qgenericatomic.h:
-
-/usr/include/x86_64-linux-gnu/qt5/QtSql/qsqlrecord.h:
-
-/usr/include/x86_64-linux-gnu/qt5/QtGui/qtextcursor.h:
-
-/usr/include/x86_64-linux-gnu/qt5/QtWidgets/qabstractscrollarea.h:
-
-/usr/include/x86_64-linux-gnu/bits/timesize.h:
-
-/usr/include/x86_64-linux-gnu/qt5/QtWidgets/qabstractitemdelegate.h:
-
-/usr/include/x86_64-linux-gnu/qt5/QtWidgets/qstyleoption.h:

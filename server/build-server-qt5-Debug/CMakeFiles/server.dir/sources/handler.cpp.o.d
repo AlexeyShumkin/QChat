@@ -199,6 +199,9 @@ CMakeFiles/server.dir/sources/handler.cpp.o: \
  /usr/include/x86_64-linux-gnu/qt5/QtSql/qtsqlglobal.h \
  /usr/include/x86_64-linux-gnu/qt5/QtSql/qtsql-config.h \
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qstring.h \
+ /usr/include/x86_64-linux-gnu/qt5/QtSql/QSqlQuery \
+ /usr/include/x86_64-linux-gnu/qt5/QtSql/qsqlquery.h \
+ /usr/include/x86_64-linux-gnu/qt5/QtSql/qsqldatabase.h \
  /usr/include/x86_64-linux-gnu/qt5/QtCore/QDebug \
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qdebug.h \
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qalgorithms.h \

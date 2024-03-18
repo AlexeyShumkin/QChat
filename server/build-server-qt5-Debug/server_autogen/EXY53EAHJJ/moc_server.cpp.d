@@ -307,7 +307,9 @@
   /usr/include/x86_64-linux-gnu/qt5/QtNetwork/qtnetwork-config.h \
   /usr/include/x86_64-linux-gnu/qt5/QtNetwork/qtnetworkglobal.h \
   /usr/include/x86_64-linux-gnu/qt5/QtSql/QSqlDatabase \
+  /usr/include/x86_64-linux-gnu/qt5/QtSql/QSqlQuery \
   /usr/include/x86_64-linux-gnu/qt5/QtSql/qsqldatabase.h \
+  /usr/include/x86_64-linux-gnu/qt5/QtSql/qsqlquery.h \
   /usr/include/x86_64-linux-gnu/qt5/QtSql/qtsql-config.h \
   /usr/include/x86_64-linux-gnu/qt5/QtSql/qtsqlglobal.h \
   /usr/include/x86_64-linux-gnu/sys/cdefs.h \

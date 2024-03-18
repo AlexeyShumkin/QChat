@@ -1,5 +1,6 @@
 #pragma once
 #include <QtSql/QSqlDatabase>
+#include <QSqlQuery>
 
 class DBHandler
 {
