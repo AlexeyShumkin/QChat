@@ -35,7 +35,7 @@ void RegForm::on_buttonBox_accepted()
     std::hash<QString> hasher;
     QString str = "1#" + ui->loginEdit->text() + ' ' + QString::number(hasher(ui->passwordEdit->text()));
     session->sendToServer(str);
-    QTimer::singleShot(1000, this, [=]() {
+    QTimer::singleShot(100, this, [=]() {
         auto respond = session->getBuffer();
         if(respond == "-1")
         {

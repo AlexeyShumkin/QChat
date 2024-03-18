@@ -37,7 +37,6 @@ public:
     QPushButton *pvtButton;
     QSplitter *splitter;
     QTextBrowser *textBrowser;
-    QTextBrowser *textBrowser_2;
     QMenuBar *menubar;
     QStatusBar *statusbar;
 
@@ -82,9 +81,6 @@ public:
         textBrowser = new QTextBrowser(splitter);
         textBrowser->setObjectName(QString::fromUtf8("textBrowser"));
         splitter->addWidget(textBrowser);
-        textBrowser_2 = new QTextBrowser(splitter);
-        textBrowser_2->setObjectName(QString::fromUtf8("textBrowser_2"));
-        splitter->addWidget(textBrowser_2);
 
         verticalLayout->addWidget(splitter);
 

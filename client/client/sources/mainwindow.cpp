@@ -77,7 +77,7 @@ void MainWindow::on_pvtButton_clicked()
     QString str{"4#"};
     session->sendToServer(str);
     str.clear();
-    QTimer::singleShot(1000, this, [=, &str]() {
+    QTimer::singleShot(100, this, [=, &str]() {
         auto respond = session->getBuffer();
         for(auto c : respond)
         {
@@ -98,6 +98,7 @@ void MainWindow::on_pvtButton_clicked()
     {
         str = "3#" + username + " @" + userListWgt->currentItem()->text() + '@' + ui->msgEdit->text();
         session->sendToServer(str);
+        ui->msgEdit->clear();
         QTimer::singleShot(100, this, [=]() {
             auto respond = session->getBuffer();
             if(respond == "-1")
@@ -128,9 +129,9 @@ void MainWindow::updateChat()
         }
         else
         {
-
             QTextDocument *doc = ui->textBrowser->document();
             QTextCursor cursor(doc);
+            QStringList parts = respond.split(' ');
             cursor.insertText(respond);
             QRegExp privateTag("private");
             QRegExp publicTag("public");
@@ -151,6 +152,7 @@ void MainWindow::updateChat()
                     cursor.insertText(cursor.selectedText(), publicFormat);
                 }
             }
+            ui->textBrowser->update();
         }
     });
 }

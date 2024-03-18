@@ -49,7 +49,6 @@
        <enum>Qt::Horizontal</enum>
       </property>
       <widget class="QTextBrowser" name="textBrowser"/>
-      <widget class="QTextBrowser" name="textBrowser_2"/>
      </widget>
     </item>
    </layout>

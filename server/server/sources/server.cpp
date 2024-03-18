@@ -84,10 +84,8 @@ void Server::slotReadyRead()
         QString str;
         in >> str;
         serverUp(str);
-        qDebug() << str;
         if(handler->specHandle(str))
         {
-            qDebug() << str;
             sendToClient(str);
         }
         else
