@@ -67,19 +67,16 @@ bool SignOutHandler::specHandle(QString& str)
 
 bool UpdateHandler::specHandle(QString& str)
 {
-
-    query = "(select u.login, m.content, to_char(m.received_at,'YYYY-MM-DD HH24:MI:SS') as sent, "
-                            "case when m.recipient_id is null then 'public' else 'private' end as message_type "
-                            "from msgdata m join users u on m.sender_id = u.id where m.recipient_id IS NUll)"
-                            "union all"
-                            "(select u.login, m.content, to_char(m.received_at,'YYYY-MM-DD HH24:MI:SS') as sent, "
-                            "case when m.recipient_id = " + str + " then 'private' else 'public' end as message_type "
-                            "from msgdata m join users u on m.sender_id = u.id where m.recipient_id = " + str + ")"
-                            "union all"
-                            "(select u.login, m.content, to_char(m.received_at,'YYYY-MM-DD HH24:MI:SS') as sent, "
-                            "case when m.sender_id = " + str + " and m.recipient_id is not null then 'private' else 'public' end as message_type "
-                            "from msgdata m join users u on m.sender_id = u.id where m.sender_id = " + str + " and m.recipient_id is not null) "
-                            "ORDER BY sent DESC";
-        str = DBHandler::getConnection()->getData(query);
-        return str.size();
+    query = "(SELECT u.login AS sender_login, 'all' AS recipient_login, m.content, to_char(m.received_at,'YYYY-MM-DD HH24:MI:SS') "
+            "AS sent, 'public' AS message_type FROM msgdata m JOIN users u ON m.sender_id = u.id WHERE m.recipient_id IS NULL) "
+            "UNION ALL "
+            "(SELECT u.login AS sender_login, r.login AS recipient_login, m.content, to_char(m.received_at,'YYYY-MM-DD HH24:MI:SS') "
+            "AS sent, 'private' AS message_type FROM msgdata m JOIN users u ON m.sender_id = u.id JOIN users r ON m.recipient_id = r.id WHERE m.recipient_id = " + str + ") "
+            "UNION ALL "
+            "(SELECT u.login AS sender_login, r.login AS recipient_login, m.content, to_char(m.received_at,'YYYY-MM-DD HH24:MI:SS') "
+            "AS sent, 'private' AS message_type FROM msgdata m JOIN users u ON m.sender_id = u.id JOIN users r ON m.recipient_id = r.id WHERE m.sender_id = " + str + " "
+            "AND m.recipient_id IS NOT NULL) "
+            "ORDER BY sent DESC";
+    str = DBHandler::getConnection()->getData(query);
+    return str.size();
 }

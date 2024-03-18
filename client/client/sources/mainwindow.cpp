@@ -120,36 +120,38 @@ void MainWindow::updateChat()
     session->sendToServer(str);
     QTimer::singleShot(100, this, [=]() {
         if(!session->check()) return;
-            auto respond = session->getBuffer();
-            if(respond == "-1")
+        auto respond = session->getBuffer();
+        if(respond == "-1")
+        {
+            QMessageBox::critical(this, tr("error"), tr("failed attempt to obtain data"));
+            return;
+        }
+        else
+        {
+
+            QTextDocument *doc = ui->textBrowser->document();
+            QTextCursor cursor(doc);
+            cursor.insertText(respond);
+            QRegExp privateTag("private");
+            QRegExp publicTag("public");
+            QTextCharFormat privateFormat;
+            privateFormat.setForeground(QColor(255, 0, 0));
+            QTextCharFormat publicFormat;
+            publicFormat.setForeground(QColor(0, 0, 255));
+            cursor.setPosition(0);
+            while (!cursor.atEnd())
             {
-                QMessageBox::critical(this, tr("error"), tr("failed attempt to obtain data"));
-                return;
-            }
-            else
-            {
-                QTextDocument *doc = ui->textBrowser->document();
-                QTextCursor cursor(doc);
-                cursor.insertText(respond);
-                QRegExp privateTag("private");
-                QRegExp publicTag("public");
-                QTextCharFormat privateFormat;
-                privateFormat.setForeground(QColor(255, 0, 0));
-                QTextCharFormat publicFormat;
-                publicFormat.setForeground(QColor(0, 0, 255));
-                cursor.setPosition(0);
-                while (!cursor.atEnd()) {
-                    cursor.movePosition(QTextCursor::NextCharacter, QTextCursor::KeepAnchor);
-                    if (privateTag.indexIn(cursor.selectedText()) != -1)
-                    {
-                        cursor.insertText(cursor.selectedText(), privateFormat);
-                    }
-                    else if (publicTag.indexIn(cursor.selectedText()) != -1)
-                    {
-                        cursor.insertText(cursor.selectedText(), publicFormat);
-                    }
+                cursor.movePosition(QTextCursor::NextCharacter, QTextCursor::KeepAnchor);
+                if (privateTag.indexIn(cursor.selectedText()) != -1)
+                {
+                    cursor.insertText(cursor.selectedText(), privateFormat);
+                }
+                else if (publicTag.indexIn(cursor.selectedText()) != -1)
+                {
+                    cursor.insertText(cursor.selectedText(), publicFormat);
                 }
             }
+        }
     });
 }
 
