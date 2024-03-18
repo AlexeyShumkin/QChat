@@ -31,7 +31,7 @@ void LoginForm::on_buttonBox_accepted()
     std::hash<QString> hasher;
     QString str = "2#" + ui->loginEdit->text() + ' ' + QString::number(hasher(ui->passwordEdit->text()));
     session->sendToServer(str);
-    QTimer::singleShot(1000, this, [=]() {
+    QTimer::singleShot(100, this, [=]() {
         auto respond = session->getBuffer();
         if(respond == "-1")
         {
@@ -39,7 +39,9 @@ void LoginForm::on_buttonBox_accepted()
         }
         else
         {
+            qDebug() << respond;
             auto id = respond.toInt();
+            qDebug() << id;
             emit accepted(id, ui->loginEdit->text());
         }
     });

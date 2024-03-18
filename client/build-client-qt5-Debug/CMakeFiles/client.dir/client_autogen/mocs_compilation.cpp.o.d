@@ -294,6 +294,8 @@ CMakeFiles/client.dir/client_autogen/mocs_compilation.cpp.o: \
  /usr/include/c++/11/variant \
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qset.h \
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qcontiguouscache.h \
+ /usr/include/c++/11/mutex /usr/include/c++/11/bits/std_mutex.h \
+ /usr/include/c++/11/bits/unique_lock.h \
  /home/awl/projects/QChat/client/build-client-qt5-Debug/client_autogen/EXY53EAHJJ/moc_mainwindow.cpp \
  /home/awl/projects/QChat/client/build-client-qt5-Debug/client_autogen/EXY53EAHJJ/../../../client/sources/mainwindow.h \
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QMainWindow \
@@ -301,6 +303,14 @@ CMakeFiles/client.dir/client_autogen/mocs_compilation.cpp.o: \
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qwidget.h \
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qtabwidget.h \
  /usr/include/x86_64-linux-gnu/qt5/QtGui/qicon.h \
+ /usr/include/x86_64-linux-gnu/qt5/QtGui/QCloseEvent \
+ /usr/include/x86_64-linux-gnu/qt5/QtGui/qevent.h \
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qcoreevent.h \
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qurl.h \
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qfile.h \
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qfiledevice.h \
+ /usr/include/x86_64-linux-gnu/qt5/QtGui/qvector2d.h \
+ /usr/include/x86_64-linux-gnu/qt5/QtGui/qtouchdevice.h \
  /home/awl/projects/QChat/client/build-client-qt5-Debug/client_autogen/EXY53EAHJJ/moc_regform.cpp \
  /home/awl/projects/QChat/client/build-client-qt5-Debug/client_autogen/EXY53EAHJJ/../../../client/sources/regform.h \
  /home/awl/projects/QChat/client/build-client-qt5-Debug/client_autogen/EXY53EAHJJ/moc_session.cpp \

@@ -1,5 +1,6 @@
 /home/awl/projects/QChat/server/build-server-qt5-Debug/server_autogen/EXY53EAHJJ/moc_server.cpp: /home/awl/projects/QChat/server/server/sources/server.h \
   /home/awl/projects/QChat/server/build-server-qt5-Debug/server_autogen/moc_predefs.h \
+  /home/awl/projects/QChat/server/server/sources/connection.h \
   /home/awl/projects/QChat/server/server/sources/handler.h \
   /usr/include/asm-generic/errno-base.h \
   /usr/include/asm-generic/errno.h \
@@ -305,6 +306,10 @@
   /usr/include/x86_64-linux-gnu/qt5/QtNetwork/qtcpsocket.h \
   /usr/include/x86_64-linux-gnu/qt5/QtNetwork/qtnetwork-config.h \
   /usr/include/x86_64-linux-gnu/qt5/QtNetwork/qtnetworkglobal.h \
+  /usr/include/x86_64-linux-gnu/qt5/QtSql/QSqlDatabase \
+  /usr/include/x86_64-linux-gnu/qt5/QtSql/qsqldatabase.h \
+  /usr/include/x86_64-linux-gnu/qt5/QtSql/qtsql-config.h \
+  /usr/include/x86_64-linux-gnu/qt5/QtSql/qtsqlglobal.h \
   /usr/include/x86_64-linux-gnu/sys/cdefs.h \
   /usr/include/x86_64-linux-gnu/sys/syscall.h \
   /usr/lib/gcc/x86_64-linux-gnu/11/include/limits.h \

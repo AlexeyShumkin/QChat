@@ -301,4 +301,9 @@ CMakeFiles/server.dir/server_autogen/mocs_compilation.cpp.o: \
  /usr/include/x86_64-linux-gnu/qt5/QtNetwork/qtcpsocket.h \
  /home/awl/projects/QChat/server/build-server-qt5-Debug/server_autogen/EXY53EAHJJ/../../../server/sources/handler.h \
  /usr/include/x86_64-linux-gnu/qt5/QtCore/QString \
- /usr/include/x86_64-linux-gnu/qt5/QtCore/qstring.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qstring.h \
+ /home/awl/projects/QChat/server/build-server-qt5-Debug/server_autogen/EXY53EAHJJ/../../../server/sources/connection.h \
+ /usr/include/x86_64-linux-gnu/qt5/QtSql/QSqlDatabase \
+ /usr/include/x86_64-linux-gnu/qt5/QtSql/qsqldatabase.h \
+ /usr/include/x86_64-linux-gnu/qt5/QtSql/qtsqlglobal.h \
+ /usr/include/x86_64-linux-gnu/qt5/QtSql/qtsql-config.h

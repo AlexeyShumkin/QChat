@@ -1,5 +1,6 @@
 #pragma once
 #include <QString>
+#include "connection.h"
 
 class IHandler
 {
@@ -29,6 +30,18 @@ public:
 };
 
 class UsersDisplayHandler : public IHandler
+{
+public:
+    bool specHandle(QString& str) override;
+};
+
+class SignOutHandler : public IHandler
+{
+public:
+    bool specHandle(QString& str) override;
+};
+
+class UpdateHandler : public IHandler
 {
 public:
     bool specHandle(QString& str) override;

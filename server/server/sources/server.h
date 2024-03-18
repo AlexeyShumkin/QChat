@@ -16,10 +16,10 @@ public:
 private:
     QVector<QTcpSocket*> sockets_;
     QByteArray data_;
-    quint16 nextBlockSize{0};
-    enum Commands { SIGNUP = 1, SIGNIN, POST, USERS, SIGNOUT };
+    quint16 nextBlockSize{ 0 };
+    enum Commands { SIGNUP = 1, SIGNIN, POST, USERS, SIGNOUT, UPDATE };
     std::unique_ptr<IHandler> handler;
-
+    bool dataSendFlag{ false };
     void sendToClient(QString str);
     void setHandler(std::unique_ptr<IHandler>&& h);
 

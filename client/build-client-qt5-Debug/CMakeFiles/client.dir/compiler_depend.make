@@ -342,6 +342,9 @@ CMakeFiles/client.dir/client_autogen/mocs_compilation.cpp.o: client_autogen/mocs
   /usr/include/c++/11/variant \
   /usr/include/x86_64-linux-gnu/qt5/QtCore/qset.h \
   /usr/include/x86_64-linux-gnu/qt5/QtCore/qcontiguouscache.h \
+  /usr/include/c++/11/mutex \
+  /usr/include/c++/11/bits/std_mutex.h \
+  /usr/include/c++/11/bits/unique_lock.h \
   client_autogen/EXY53EAHJJ/moc_mainwindow.cpp \
   /home/awl/projects/QChat/client/client/sources/mainwindow.h \
   /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QMainWindow \
@@ -349,6 +352,14 @@ CMakeFiles/client.dir/client_autogen/mocs_compilation.cpp.o: client_autogen/mocs
   /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qwidget.h \
   /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qtabwidget.h \
   /usr/include/x86_64-linux-gnu/qt5/QtGui/qicon.h \
+  /usr/include/x86_64-linux-gnu/qt5/QtGui/QCloseEvent \
+  /usr/include/x86_64-linux-gnu/qt5/QtGui/qevent.h \
+  /usr/include/x86_64-linux-gnu/qt5/QtCore/qcoreevent.h \
+  /usr/include/x86_64-linux-gnu/qt5/QtCore/qurl.h \
+  /usr/include/x86_64-linux-gnu/qt5/QtCore/qfile.h \
+  /usr/include/x86_64-linux-gnu/qt5/QtCore/qfiledevice.h \
+  /usr/include/x86_64-linux-gnu/qt5/QtGui/qvector2d.h \
+  /usr/include/x86_64-linux-gnu/qt5/QtGui/qtouchdevice.h \
   client_autogen/EXY53EAHJJ/moc_regform.cpp \
   /home/awl/projects/QChat/client/client/sources/regform.h \
   client_autogen/EXY53EAHJJ/moc_session.cpp \
@@ -697,6 +708,9 @@ CMakeFiles/client.dir/sources/loginform.cpp.o: /home/awl/projects/QChat/client/c
   /usr/include/c++/11/variant \
   /usr/include/x86_64-linux-gnu/qt5/QtCore/qset.h \
   /usr/include/x86_64-linux-gnu/qt5/QtCore/qcontiguouscache.h \
+  /usr/include/c++/11/mutex \
+  /usr/include/c++/11/bits/std_mutex.h \
+  /usr/include/c++/11/bits/unique_lock.h \
   ui_loginform.h \
   /usr/include/x86_64-linux-gnu/qt5/QtCore/QVariant \
   /usr/include/x86_64-linux-gnu/qt5/QtCore/qvariant.h \
@@ -1087,10 +1101,20 @@ CMakeFiles/client.dir/sources/main.cpp.o: /home/awl/projects/QChat/client/client
   /usr/include/c++/11/variant \
   /usr/include/x86_64-linux-gnu/qt5/QtCore/qset.h \
   /usr/include/x86_64-linux-gnu/qt5/QtCore/qcontiguouscache.h \
+  /usr/include/c++/11/mutex \
+  /usr/include/c++/11/bits/std_mutex.h \
+  /usr/include/c++/11/bits/unique_lock.h \
+  /usr/include/x86_64-linux-gnu/qt5/QtGui/QCloseEvent \
+  /usr/include/x86_64-linux-gnu/qt5/QtGui/qevent.h \
+  /usr/include/x86_64-linux-gnu/qt5/QtCore/qcoreevent.h \
+  /usr/include/x86_64-linux-gnu/qt5/QtCore/qurl.h \
+  /usr/include/x86_64-linux-gnu/qt5/QtCore/qfile.h \
+  /usr/include/x86_64-linux-gnu/qt5/QtCore/qfiledevice.h \
+  /usr/include/x86_64-linux-gnu/qt5/QtGui/qvector2d.h \
+  /usr/include/x86_64-linux-gnu/qt5/QtGui/qtouchdevice.h \
   /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QApplication \
   /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qapplication.h \
   /usr/include/x86_64-linux-gnu/qt5/QtCore/qcoreapplication.h \
-  /usr/include/x86_64-linux-gnu/qt5/QtCore/qcoreevent.h \
   /usr/include/x86_64-linux-gnu/qt5/QtCore/qeventloop.h \
   /usr/include/x86_64-linux-gnu/qt5/QtGui/qguiapplication.h \
   /usr/include/x86_64-linux-gnu/qt5/QtGui/qinputmethod.h \
@@ -1442,13 +1466,23 @@ CMakeFiles/client.dir/sources/mainwindow.cpp.o: /home/awl/projects/QChat/client/
   /usr/include/c++/11/variant \
   /usr/include/x86_64-linux-gnu/qt5/QtCore/qset.h \
   /usr/include/x86_64-linux-gnu/qt5/QtCore/qcontiguouscache.h \
+  /usr/include/c++/11/mutex \
+  /usr/include/c++/11/bits/std_mutex.h \
+  /usr/include/c++/11/bits/unique_lock.h \
+  /usr/include/x86_64-linux-gnu/qt5/QtGui/QCloseEvent \
+  /usr/include/x86_64-linux-gnu/qt5/QtGui/qevent.h \
+  /usr/include/x86_64-linux-gnu/qt5/QtCore/qcoreevent.h \
+  /usr/include/x86_64-linux-gnu/qt5/QtCore/qurl.h \
+  /usr/include/x86_64-linux-gnu/qt5/QtCore/qfile.h \
+  /usr/include/x86_64-linux-gnu/qt5/QtCore/qfiledevice.h \
+  /usr/include/x86_64-linux-gnu/qt5/QtGui/qvector2d.h \
+  /usr/include/x86_64-linux-gnu/qt5/QtGui/qtouchdevice.h \
   ui_mainwindow.h \
   /usr/include/x86_64-linux-gnu/qt5/QtCore/QVariant \
   /usr/include/x86_64-linux-gnu/qt5/QtCore/qvariant.h \
   /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QApplication \
   /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qapplication.h \
   /usr/include/x86_64-linux-gnu/qt5/QtCore/qcoreapplication.h \
-  /usr/include/x86_64-linux-gnu/qt5/QtCore/qcoreevent.h \
   /usr/include/x86_64-linux-gnu/qt5/QtCore/qeventloop.h \
   /usr/include/x86_64-linux-gnu/qt5/QtGui/qguiapplication.h \
   /usr/include/x86_64-linux-gnu/qt5/QtGui/qinputmethod.h \
@@ -1485,7 +1519,6 @@ CMakeFiles/client.dir/sources/mainwindow.cpp.o: /home/awl/projects/QChat/client/
   /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qtextedit.h \
   /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qabstractscrollarea.h \
   /usr/include/x86_64-linux-gnu/qt5/QtGui/qtextdocument.h \
-  /usr/include/x86_64-linux-gnu/qt5/QtCore/qurl.h \
   /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QVBoxLayout \
   /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QWidget \
   /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qwidget.h \
@@ -1858,6 +1891,9 @@ CMakeFiles/client.dir/sources/regform.cpp.o: /home/awl/projects/QChat/client/cli
   /usr/include/c++/11/variant \
   /usr/include/x86_64-linux-gnu/qt5/QtCore/qset.h \
   /usr/include/x86_64-linux-gnu/qt5/QtCore/qcontiguouscache.h \
+  /usr/include/c++/11/mutex \
+  /usr/include/c++/11/bits/std_mutex.h \
+  /usr/include/c++/11/bits/unique_lock.h \
   ui_regform.h \
   /usr/include/x86_64-linux-gnu/qt5/QtCore/QVariant \
   /usr/include/x86_64-linux-gnu/qt5/QtCore/qvariant.h \
@@ -2212,6 +2248,9 @@ CMakeFiles/client.dir/sources/session.cpp.o: /home/awl/projects/QChat/client/cli
   /usr/include/c++/11/bits/shared_ptr_atomic.h \
   /usr/include/c++/11/backward/auto_ptr.h \
   /usr/include/c++/11/pstl/glue_memory_defs.h \
+  /usr/include/c++/11/mutex \
+  /usr/include/c++/11/bits/std_mutex.h \
+  /usr/include/c++/11/bits/unique_lock.h \
   /usr/include/x86_64-linux-gnu/qt5/QtCore/QDataStream \
   /usr/include/x86_64-linux-gnu/qt5/QtCore/qdatastream.h
 
@@ -2556,6 +2595,9 @@ CMakeFiles/client.dir/sources/startscreen.cpp.o: /home/awl/projects/QChat/client
   /usr/include/c++/11/variant \
   /usr/include/x86_64-linux-gnu/qt5/QtCore/qset.h \
   /usr/include/x86_64-linux-gnu/qt5/QtCore/qcontiguouscache.h \
+  /usr/include/c++/11/mutex \
+  /usr/include/c++/11/bits/std_mutex.h \
+  /usr/include/c++/11/bits/unique_lock.h \
   ui_startscreen.h \
   /usr/include/x86_64-linux-gnu/qt5/QtCore/QVariant \
   /usr/include/x86_64-linux-gnu/qt5/QtCore/qvariant.h \
@@ -2601,8 +2643,6 @@ ui_regform.h:
 /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qabstractitemview.h:
 
 /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QListWidget:
-
-/usr/include/x86_64-linux-gnu/qt5/QtCore/qurl.h:
 
 /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qabstractscrollarea.h:
 
@@ -2664,21 +2704,31 @@ ui_regform.h:
 
 /usr/include/x86_64-linux-gnu/qt5/QtCore/qeventloop.h:
 
-/usr/include/x86_64-linux-gnu/qt5/QtCore/QDataStream:
-
-/usr/include/x86_64-linux-gnu/qt5/QtCore/qcoreevent.h:
-
 /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qapplication.h:
 
 /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QDialog:
 
 client_autogen/EXY53EAHJJ/moc_regform.cpp:
 
+/usr/include/x86_64-linux-gnu/qt5/QtCore/qfiledevice.h:
+
+/usr/include/x86_64-linux-gnu/qt5/QtCore/qurl.h:
+
+/usr/include/x86_64-linux-gnu/qt5/QtCore/QDataStream:
+
+/usr/include/x86_64-linux-gnu/qt5/QtCore/qcoreevent.h:
+
+/usr/include/x86_64-linux-gnu/qt5/QtGui/qevent.h:
+
 /usr/include/x86_64-linux-gnu/qt5/QtGui/qicon.h:
 
 /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qtabwidget.h:
 
 /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QMainWindow:
+
+/usr/include/c++/11/bits/std_mutex.h:
+
+/usr/include/c++/11/mutex:
 
 /usr/include/x86_64-linux-gnu/qt5/QtCore/qcontiguouscache.h:
 
@@ -2776,6 +2826,8 @@ client_autogen/EXY53EAHJJ/moc_regform.cpp:
 
 /usr/include/x86_64-linux-gnu/qt5/QtCore/qcoreapplication.h:
 
+/usr/include/x86_64-linux-gnu/qt5/QtGui/qvector2d.h:
+
 /usr/include/x86_64-linux-gnu/qt5/QtCore/qscopedpointer.h:
 
 /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qsizepolicy.h:
@@ -2843,6 +2895,8 @@ client_autogen/EXY53EAHJJ/moc_startscreen.cpp:
 /usr/include/x86_64-linux-gnu/bits/setjmp.h:
 
 /usr/include/time.h:
+
+/usr/include/x86_64-linux-gnu/qt5/QtGui/qtouchdevice.h:
 
 /usr/include/x86_64-linux-gnu/bits/cpu-set.h:
 
@@ -2969,6 +3023,8 @@ client_autogen/mocs_compilation.cpp:
 client_autogen/EXY53EAHJJ/moc_session.cpp:
 
 /usr/include/c++/11/algorithm:
+
+/usr/include/x86_64-linux-gnu/qt5/QtGui/QCloseEvent:
 
 /usr/include/c++/11/bits/memoryfwd.h:
 
@@ -3100,6 +3156,8 @@ ui_loginform.h:
 
 /usr/include/c++/11/streambuf:
 
+/usr/include/c++/11/bits/unique_lock.h:
+
 /usr/include/c++/11/bits/uses_allocator.h:
 
 client_autogen/EXY53EAHJJ/moc_loginform.cpp:
@@ -3197,6 +3255,8 @@ client_autogen/EXY53EAHJJ/moc_loginform.cpp:
 /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qslider.h:
 
 /usr/include/x86_64-linux-gnu/bits/libc-header-start.h:
+
+/usr/include/x86_64-linux-gnu/qt5/QtCore/qfile.h:
 
 /usr/include/c++/11/bits/predefined_ops.h:
 

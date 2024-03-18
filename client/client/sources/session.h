@@ -1,7 +1,7 @@
 #pragma once
 #include <QString>
 #include <QTcpSocket>
-
+#include <mutex>
 
 class Session : public QTcpSocket
 {
@@ -11,7 +11,9 @@ public:
     Session();
     ~Session();
     void sendToServer(QString str);
-    QString getBuffer() const;
+    QString& getBuffer();
+    bool check();
+
 public slots:
     void slotReadyRead();
 private:

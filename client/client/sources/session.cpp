@@ -11,7 +11,7 @@ Session::Session()
 
 Session::~Session()
 {
-    socket->close();
+   socket->close();
 }
 
 void Session::sendToServer(QString str)
@@ -23,7 +23,7 @@ void Session::sendToServer(QString str)
     socket->write(data);
 }
 
-QString Session::getBuffer() const
+QString& Session::getBuffer()
 {
     return buffer;
 }
@@ -36,5 +36,10 @@ void Session::slotReadyRead()
     {
         in >> buffer;
     }
+}
+
+bool Session::check()
+{
+    return socket->bytesAvailable() == 0;
 }
 

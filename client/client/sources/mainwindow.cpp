@@ -8,6 +8,7 @@
 #include <QDialogButtonBox>
 #include <QListWidget>
 
+
 MainWindow::MainWindow(int id, const QString& name, std::shared_ptr<Session> s, QWidget *parent)
     : QMainWindow(parent)
     , ui(new Ui::MainWindow)
@@ -16,11 +17,11 @@ MainWindow::MainWindow(int id, const QString& name, std::shared_ptr<Session> s, 
     , username(name)
 {
     ui->setupUi(this);
+    updateChat();
 }
 
 MainWindow::~MainWindow()
 {
-
     delete ui;
 }
 
@@ -33,7 +34,7 @@ MainWindow *MainWindow::createClient()
         return nullptr;
     }
     auto w = new MainWindow(s.getUserID(), s.getUsername(), s.getSession());
-    w->setAttribute(Qt::WA_DeleteOnClose);
+//  w->setAttribute(Qt::WA_DeleteOnClose);
     return w;
 }
 
@@ -47,12 +48,17 @@ void MainWindow::on_pubButton_clicked()
     QString str = "3#" + username + ' ' + ui->msgEdit->text();
     session->sendToServer(str);
     ui->msgEdit->clear();
-    QTimer::singleShot(1000, this, [=]() {
+    QTimer::singleShot(100, this, [=]() {
         auto respond = session->getBuffer();
         if(respond == "-1")
         {
             QMessageBox::critical(this, tr("error"), tr("failed dispatch"));
             return;
+        }
+        else
+        {
+            ui->textBrowser->clear();
+            updateChat();
         }
     });
 }
@@ -92,15 +98,69 @@ void MainWindow::on_pvtButton_clicked()
     {
         str = "3#" + username + " @" + userListWgt->currentItem()->text() + '@' + ui->msgEdit->text();
         session->sendToServer(str);
-        QTimer::singleShot(1000, this, [=]() {
+        QTimer::singleShot(100, this, [=]() {
             auto respond = session->getBuffer();
             if(respond == "-1")
             {
                 QMessageBox::critical(this, tr("error"), tr("failed dispatch"));
                 return;
             }
+            else
+            {
+                ui->textBrowser->clear();
+                updateChat();
+            }
         });
     }
+}
+
+void MainWindow::updateChat()
+{
+    QString str = "6#" + QString::number(userID);
+    session->sendToServer(str);
+    QTimer::singleShot(100, this, [=]() {
+        if(!session->check()) return;
+            auto respond = session->getBuffer();
+            if(respond == "-1")
+            {
+                QMessageBox::critical(this, tr("error"), tr("failed attempt to obtain data"));
+                return;
+            }
+            else
+            {
+                QTextDocument *doc = ui->textBrowser->document();
+                QTextCursor cursor(doc);
+                cursor.insertText(respond);
+                QRegExp privateTag("private");
+                QRegExp publicTag("public");
+                QTextCharFormat privateFormat;
+                privateFormat.setForeground(QColor(255, 0, 0));
+                QTextCharFormat publicFormat;
+                publicFormat.setForeground(QColor(0, 0, 255));
+                cursor.setPosition(0);
+                while (!cursor.atEnd()) {
+                    cursor.movePosition(QTextCursor::NextCharacter, QTextCursor::KeepAnchor);
+                    if (privateTag.indexIn(cursor.selectedText()) != -1)
+                    {
+                        cursor.insertText(cursor.selectedText(), privateFormat);
+                    }
+                    else if (publicTag.indexIn(cursor.selectedText()) != -1)
+                    {
+                        cursor.insertText(cursor.selectedText(), publicFormat);
+                    }
+                }
+            }
+    });
+}
+
+void MainWindow::closeEvent(QCloseEvent *event)
+{
+    QString str = "5#" + QString::number(userID);
+    session->sendToServer(str);
+    qDebug() << str;
+    QTimer::singleShot(0, this, [=]() {
+        event->accept();
+    });
 }
 
 

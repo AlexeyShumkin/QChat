@@ -263,5 +263,10 @@ CMakeFiles/server.dir/sources/server.cpp.o: \
  /home/awl/projects/QChat/server/server/sources/handler.h \
  /usr/include/x86_64-linux-gnu/qt5/QtCore/QString \
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qstring.h \
+ /home/awl/projects/QChat/server/server/sources/connection.h \
+ /usr/include/x86_64-linux-gnu/qt5/QtSql/QSqlDatabase \
+ /usr/include/x86_64-linux-gnu/qt5/QtSql/qsqldatabase.h \
+ /usr/include/x86_64-linux-gnu/qt5/QtSql/qtsqlglobal.h \
+ /usr/include/x86_64-linux-gnu/qt5/QtSql/qtsql-config.h \
  /usr/include/x86_64-linux-gnu/qt5/QtCore/QDataStream \
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qdatastream.h

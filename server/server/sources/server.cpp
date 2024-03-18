@@ -16,19 +16,31 @@ Server::Server()
 void Server::serverUp(QString& str)
 {
     QString p = str.mid(0, 1);
+    if(dataSendFlag)
+    {
+        dataSendFlag = false;
+    }
     switch(p.toInt())
     {
     case SIGNUP:
         setHandler(std::make_unique<SignUpHandler>());
+        dataSendFlag = true;
         break;
     case SIGNIN:
         setHandler(std::make_unique<SignInHandler>());
+        dataSendFlag = true;
         break;
     case POST:
         setHandler(std::make_unique<PostHandler>());
         break;
     case USERS:
         setHandler(std::make_unique<UsersDisplayHandler>());
+        break;
+    case SIGNOUT:
+        setHandler(std::make_unique<SignOutHandler>());
+        break;
+    case UPDATE:
+        setHandler(std::make_unique<UpdateHandler>());
         break;
     }
     str = str.mid(str.indexOf('#') + 1);
@@ -80,8 +92,7 @@ void Server::slotReadyRead()
         }
         else
         {
-            str.clear();
-            str += "-1";
+            str = "-1";
             sendToClient(str);
         }
     }

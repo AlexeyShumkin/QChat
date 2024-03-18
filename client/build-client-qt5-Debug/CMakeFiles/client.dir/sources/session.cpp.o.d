@@ -258,6 +258,8 @@ CMakeFiles/client.dir/sources/session.cpp.o: \
  /usr/include/c++/11/ext/concurrence.h \
  /usr/include/c++/11/bits/shared_ptr_atomic.h \
  /usr/include/c++/11/backward/auto_ptr.h \
- /usr/include/c++/11/pstl/glue_memory_defs.h \
+ /usr/include/c++/11/pstl/glue_memory_defs.h /usr/include/c++/11/mutex \
+ /usr/include/c++/11/bits/std_mutex.h \
+ /usr/include/c++/11/bits/unique_lock.h \
  /usr/include/x86_64-linux-gnu/qt5/QtCore/QDataStream \
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qdatastream.h
