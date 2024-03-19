@@ -13,6 +13,7 @@ public:
     void sendToServer(QString str);
     QString& getBuffer();
     bool check();
+    bool socketBufferBlocked();
     void clearBuffer();
 public slots:
     void slotReadyRead();

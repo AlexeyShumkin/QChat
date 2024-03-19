@@ -31,13 +31,16 @@ class Ui_MainWindow
 public:
     QWidget *centralwidget;
     QVBoxLayout *verticalLayout;
+    QHBoxLayout *horizontalLayout_3;
+    QLabel *label_2;
+    QLabel *label_3;
+    QSplitter *splitter;
+    QTextBrowser *textBrowser;
+    QListWidget *listWidget;
     QHBoxLayout *horizontalLayout;
     QLabel *label;
     QLineEdit *msgEdit;
     QPushButton *pubButton;
-    QSplitter *splitter;
-    QTextBrowser *textBrowser;
-    QListWidget *listWidget;
     QMenuBar *menubar;
     QStatusBar *statusbar;
 
@@ -50,6 +53,33 @@ public:
         centralwidget->setObjectName(QString::fromUtf8("centralwidget"));
         verticalLayout = new QVBoxLayout(centralwidget);
         verticalLayout->setObjectName(QString::fromUtf8("verticalLayout"));
+        horizontalLayout_3 = new QHBoxLayout();
+        horizontalLayout_3->setObjectName(QString::fromUtf8("horizontalLayout_3"));
+        label_2 = new QLabel(centralwidget);
+        label_2->setObjectName(QString::fromUtf8("label_2"));
+
+        horizontalLayout_3->addWidget(label_2);
+
+        label_3 = new QLabel(centralwidget);
+        label_3->setObjectName(QString::fromUtf8("label_3"));
+
+        horizontalLayout_3->addWidget(label_3);
+
+
+        verticalLayout->addLayout(horizontalLayout_3);
+
+        splitter = new QSplitter(centralwidget);
+        splitter->setObjectName(QString::fromUtf8("splitter"));
+        splitter->setOrientation(Qt::Horizontal);
+        textBrowser = new QTextBrowser(splitter);
+        textBrowser->setObjectName(QString::fromUtf8("textBrowser"));
+        splitter->addWidget(textBrowser);
+        listWidget = new QListWidget(splitter);
+        listWidget->setObjectName(QString::fromUtf8("listWidget"));
+        splitter->addWidget(listWidget);
+
+        verticalLayout->addWidget(splitter);
+
         horizontalLayout = new QHBoxLayout();
         horizontalLayout->setObjectName(QString::fromUtf8("horizontalLayout"));
         label = new QLabel(centralwidget);
@@ -70,19 +100,8 @@ public:
 
         verticalLayout->addLayout(horizontalLayout);
 
-        splitter = new QSplitter(centralwidget);
-        splitter->setObjectName(QString::fromUtf8("splitter"));
-        splitter->setOrientation(Qt::Horizontal);
-        textBrowser = new QTextBrowser(splitter);
-        textBrowser->setObjectName(QString::fromUtf8("textBrowser"));
-        splitter->addWidget(textBrowser);
-        listWidget = new QListWidget(splitter);
-        listWidget->setObjectName(QString::fromUtf8("listWidget"));
-        splitter->addWidget(listWidget);
-
-        verticalLayout->addWidget(splitter);
-
-        verticalLayout->setStretch(1, 1);
+        verticalLayout->setStretch(0, 1);
+        verticalLayout->setStretch(1, 20);
         MainWindow->setCentralWidget(centralwidget);
         menubar = new QMenuBar(MainWindow);
         menubar->setObjectName(QString::fromUtf8("menubar"));
@@ -100,6 +119,11 @@ public:
     void retranslateUi(QMainWindow *MainWindow)
     {
         MainWindow->setWindowTitle(QCoreApplication::translate("MainWindow", "MainWindow", nullptr));
+#if QT_CONFIG(tooltip)
+        label_2->setToolTip(QCoreApplication::translate("MainWindow", "<html><head/><body><p><br/></p></body></html>", nullptr));
+#endif // QT_CONFIG(tooltip)
+        label_2->setText(QCoreApplication::translate("MainWindow", "                                      chat:", nullptr));
+        label_3->setText(QCoreApplication::translate("MainWindow", "                                      users:", nullptr));
         label->setText(QCoreApplication::translate("MainWindow", "your message:", nullptr));
         pubButton->setText(QCoreApplication::translate("MainWindow", "post", nullptr));
     } // retranslateUi

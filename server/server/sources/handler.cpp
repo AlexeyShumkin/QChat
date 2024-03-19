@@ -50,7 +50,6 @@ bool PostHandler::specHandle(QString& str)
         query += substr + "')";
         return DBHandler::getConnection()->executeQuery(query);
     }
-
 }
 
 bool UsersDisplayHandler::specHandle(QString& str)
@@ -69,13 +68,13 @@ bool SignOutHandler::specHandle(QString& str)
 bool UpdateHandler::specHandle(QString& str)
 {
     query = "(SELECT u.login AS sender_login, 'all' AS recipient_login, m.content, to_char(m.received_at,'YYYY-MM-DD HH24:MI:SS') "
-            "AS sent, 'public' AS message_type FROM msgdata m JOIN users u ON m.sender_id = u.id WHERE m.recipient_id IS NULL) "
+            "AS sent, '<pub>' AS message_type FROM msgdata m JOIN users u ON m.sender_id = u.id WHERE m.recipient_id IS NULL) "
             "UNION ALL "
             "(SELECT u.login AS sender_login, r.login AS recipient_login, m.content, to_char(m.received_at,'YYYY-MM-DD HH24:MI:SS') "
-            "AS sent, 'private' AS message_type FROM msgdata m JOIN users u ON m.sender_id = u.id JOIN users r ON m.recipient_id = r.id WHERE m.recipient_id = " + str + ") "
+            "AS sent, '<pvt>' AS message_type FROM msgdata m JOIN users u ON m.sender_id = u.id JOIN users r ON m.recipient_id = r.id WHERE m.recipient_id = " + str + ") "
             "UNION ALL "
             "(SELECT u.login AS sender_login, r.login AS recipient_login, m.content, to_char(m.received_at,'YYYY-MM-DD HH24:MI:SS') "
-            "AS sent, 'private' AS message_type FROM msgdata m JOIN users u ON m.sender_id = u.id JOIN users r ON m.recipient_id = r.id WHERE m.sender_id = " + str + " "
+            "AS sent, '<pvt>' AS message_type FROM msgdata m JOIN users u ON m.sender_id = u.id JOIN users r ON m.recipient_id = r.id WHERE m.sender_id = " + str + " "
             "AND m.recipient_id IS NOT NULL) "
             "ORDER BY sent DESC";
     str = DBHandler::getConnection()->getData(query);

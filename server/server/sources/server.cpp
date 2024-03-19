@@ -71,6 +71,15 @@ void Server::incomingConnection(qintptr socketDecriptor)
 void Server::slotReadyRead()
 {
     socket = (QTcpSocket*)sender();
+    if(sockets.find(socket).key()->signalsBlocked())
+    {
+        socket->setSocketOption(QAbstractSocket::LowDelayOption, 1);
+        return;
+    }
+    else
+    {
+        socket->setSocketOption(QAbstractSocket::LowDelayOption, 0);
+    }
     QDataStream in(socket);
     in.setVersion(QDataStream::Qt_5_15);
     if(in.status() == QDataStream::Ok)
@@ -82,7 +91,7 @@ void Server::slotReadyRead()
         {
             sockets[socket] = str.toInt();
         }
-        if(!sockets.find(socket).key()->signalsBlocked() && handler->specHandle(str))
+        if(handler->specHandle(str))
         {
             sendToClient(str);
         }

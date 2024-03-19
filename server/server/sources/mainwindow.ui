@@ -6,25 +6,41 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>717</width>
-    <height>376</height>
+    <width>722</width>
+    <height>521</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>MainWindow</string>
   </property>
   <widget class="QWidget" name="centralwidget">
-   <layout class="QHBoxLayout" name="horizontalLayout">
+   <layout class="QVBoxLayout" name="verticalLayout" stretch="0,1">
+    <item>
+     <layout class="QHBoxLayout" name="horizontalLayout">
+      <item>
+       <widget class="QLabel" name="label">
+        <property name="text">
+         <string>                                             chat:</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QLabel" name="label_2">
+        <property name="text">
+         <string>                                            users:</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </item>
     <item>
      <widget class="QSplitter" name="splitter">
       <property name="orientation">
        <enum>Qt::Horizontal</enum>
       </property>
       <widget class="QTextBrowser" name="textBrowser"/>
+      <widget class="QListWidget" name="listWidget"/>
      </widget>
-    </item>
-    <item>
-     <widget class="QListWidget" name="listWidget"/>
     </item>
    </layout>
   </widget>
@@ -33,7 +49,7 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>717</width>
+     <width>722</width>
      <height>22</height>
     </rect>
    </property>

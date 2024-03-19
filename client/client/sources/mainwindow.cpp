@@ -56,6 +56,7 @@ void MainWindow::on_msgEdit_returnPressed()
 
 void MainWindow::on_pubButton_clicked()
 {
+    if(session->socketBufferBlocked()) return;
     QString str = "3#" + username + ' ' + ui->msgEdit->text();
     session->sendToServer(str);
     ui->msgEdit->clear();
@@ -75,6 +76,7 @@ void MainWindow::on_pubButton_clicked()
 }
 void MainWindow::on_pvtButton_clicked()
 {
+    if(session->socketBufferBlocked()) return;
     QString recipient = ui->listWidget->currentItem()->text();
     recipient = recipient.mid(recipient.indexOf(' ') + 1, recipient.lastIndexOf(' ') - recipient.indexOf(' ') - 1);
     QString str = "3#" + username + " @" + recipient + '@' + ui->msgEdit->text();
@@ -97,6 +99,7 @@ void MainWindow::on_pvtButton_clicked()
 
 void MainWindow::updateChat()
 {
+    if(session->socketBufferBlocked()) return;
     QString str = "6#" + QString::number(userID);
     session->clearBuffer();
     session->sendToServer(str);
@@ -109,6 +112,12 @@ void MainWindow::updateChat()
             session->clearBuffer();
             return;
         }
+        if(respond == "you are unblocked")
+        {
+            ui->textBrowser->clear();
+            updateUserList();
+            return;
+        }
         if(respond == "-1")
         {
             QMessageBox::critical(this, tr("error"), tr("failed attempt to obtain data"));
@@ -116,13 +125,21 @@ void MainWindow::updateChat()
         }
         else
         {
-            QTextDocument *doc = ui->textBrowser->document();
+            QTextDocument* doc = ui->textBrowser->document();
             QTextCursor cursor(doc);
-            QStringList parts = respond.split(' ');
             cursor.insertText(respond);
-
-            QRegExp privateTag("private");
-            QRegExp publicTag("public");
+            QStringList lines = respond.split('\n');
+            for(int i = 0; i < lines.size() - 1; ++i)
+            {
+                QString tmp = lines[i].mid(lines[i].indexOf(' ') + 1);
+                tmp = tmp.mid(0, tmp.indexOf(' '));
+                lines[i].insert(lines[i].indexOf(' ') + 1, "->");
+                lines[i].insert(lines[i].indexOf('>') + tmp.size() + 1, ": ");
+            }
+            respond = lines.join('\n');
+            ui->textBrowser->setText(respond);
+            QRegExp privateTag("<pvt>");
+            QRegExp publicTag("<pub>");
             QTextCharFormat privateFormat;
             privateFormat.setForeground(QColor(255, 0, 0));
             QTextCharFormat publicFormat;
@@ -149,6 +166,7 @@ void MainWindow::updateChat()
 
 void MainWindow::updateUserList()
 {
+    if(session->socketBufferBlocked()) return;
     ui->listWidget->clear();
     QString str{"4#"};
     session->clearBuffer();
@@ -159,7 +177,9 @@ void MainWindow::updateUserList()
         QStringList lines = respond.split('\n');
         for(int i = 0; i < lines.size() - 1; ++i)
         {
-            lines[i].prepend("user: ");
+            QString num = QString::number(i + 1);
+            num += ") ";
+            lines[i].prepend(num);
             if(lines[i].indexOf("online") >= 0)
             {
                 QListWidgetItem *item = new QListWidgetItem(ui->listWidget);
@@ -173,7 +193,6 @@ void MainWindow::updateUserList()
                 item->setForeground(QBrush(Qt::darkGray));
             }
         }
-        ui->listWidget->setCurrentRow(0);
     });
 }
 

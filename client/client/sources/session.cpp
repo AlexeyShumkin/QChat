@@ -43,6 +43,19 @@ bool Session::check()
     return socket->bytesAvailable() == 0;
 }
 
+bool Session::socketBufferBlocked()
+{
+    if(!socket->signalsBlocked())
+    {
+        socket->setSocketOption(QAbstractSocket::LowDelayOption, 0);
+    }
+    else
+    {
+        socket->setSocketOption(QAbstractSocket::LowDelayOption, 1);
+    }
+    return socket->signalsBlocked();
+}
+
 void Session::clearBuffer()
 {
     buffer.clear();

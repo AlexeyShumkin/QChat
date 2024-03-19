@@ -79,8 +79,8 @@ void MainWindow::updateUserList()
     for(int i = 0; i < lines.size() - 1; ++i)
     {
         lines[i].prepend("id:");
-        lines[i].insert(lines[i].indexOf(' ') + 1, " user:  ");
-        lines[i].insert(lines[i].lastIndexOf(' ') + 1, "  ");
+        lines[i].insert(lines[i].indexOf(' ') + 1, " user: ");
+        lines[i].insert(lines[i].lastIndexOf(' ') + 1, " ");
         if(lines[i].indexOf("online") >= 0)
         {
             QListWidgetItem *item = new QListWidgetItem(ui->listWidget);
@@ -94,7 +94,6 @@ void MainWindow::updateUserList()
             item->setForeground(QBrush(Qt::darkGray));
         }
     }
-    ui->listWidget->setCurrentRow(0);
 }
 
 void MainWindow::on_listWidget_itemClicked(QListWidgetItem *item)
