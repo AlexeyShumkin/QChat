@@ -15,6 +15,8 @@ public:
     static DBHandler* getConnection();
     bool isConnected() const;
 
+    const QSqlDatabase& getDb() const;
+
 private:
     DBHandler();
     QSqlDatabase db;

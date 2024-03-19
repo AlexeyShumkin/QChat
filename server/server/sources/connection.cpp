@@ -20,6 +20,11 @@ DBHandler::DBHandler()
     db.open();
 }
 
+const QSqlDatabase& DBHandler::getDb() const
+{
+    return db;
+}
+
 bool DBHandler::executeQuery(QString& str)
 {
     QSqlQuery query(db);

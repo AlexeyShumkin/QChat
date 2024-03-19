@@ -375,6 +375,9 @@ CMakeFiles/server.dir/server_autogen/mocs_compilation.cpp.o: server_autogen/mocs
   /usr/include/x86_64-linux-gnu/qt5/QtSql/QSqlQuery \
   /usr/include/x86_64-linux-gnu/qt5/QtSql/qsqlquery.h \
   /usr/include/x86_64-linux-gnu/qt5/QtSql/qsqldatabase.h \
+  /usr/include/x86_64-linux-gnu/qt5/QtCore/QTimer \
+  /usr/include/x86_64-linux-gnu/qt5/QtCore/qtimer.h \
+  /usr/include/x86_64-linux-gnu/qt5/QtCore/qbasictimer.h \
   server_autogen/EXY53EAHJJ/moc_server.cpp
 
 CMakeFiles/server.dir/sources/connection.cpp.o: /home/awl/projects/QChat/server/server/sources/connection.cpp \
@@ -1711,6 +1714,9 @@ CMakeFiles/server.dir/sources/main.cpp.o: /home/awl/projects/QChat/server/server
   /usr/include/x86_64-linux-gnu/qt5/QtSql/QSqlQuery \
   /usr/include/x86_64-linux-gnu/qt5/QtSql/qsqlquery.h \
   /usr/include/x86_64-linux-gnu/qt5/QtSql/qsqldatabase.h \
+  /usr/include/x86_64-linux-gnu/qt5/QtCore/QTimer \
+  /usr/include/x86_64-linux-gnu/qt5/QtCore/qtimer.h \
+  /usr/include/x86_64-linux-gnu/qt5/QtCore/qbasictimer.h \
   /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QApplication \
   /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qapplication.h \
   /usr/include/x86_64-linux-gnu/qt5/QtCore/qcoreapplication.h \
@@ -2096,6 +2102,9 @@ CMakeFiles/server.dir/sources/mainwindow.cpp.o: /home/awl/projects/QChat/server/
   /usr/include/x86_64-linux-gnu/qt5/QtSql/QSqlQuery \
   /usr/include/x86_64-linux-gnu/qt5/QtSql/qsqlquery.h \
   /usr/include/x86_64-linux-gnu/qt5/QtSql/qsqldatabase.h \
+  /usr/include/x86_64-linux-gnu/qt5/QtCore/QTimer \
+  /usr/include/x86_64-linux-gnu/qt5/QtCore/qtimer.h \
+  /usr/include/x86_64-linux-gnu/qt5/QtCore/qbasictimer.h \
   ui_mainwindow.h \
   /usr/include/x86_64-linux-gnu/qt5/QtCore/QVariant \
   /usr/include/x86_64-linux-gnu/qt5/QtCore/qvariant.h \
@@ -2459,9 +2468,19 @@ CMakeFiles/server.dir/sources/server.cpp.o: /home/awl/projects/QChat/server/serv
   /usr/include/x86_64-linux-gnu/qt5/QtSql/QSqlQuery \
   /usr/include/x86_64-linux-gnu/qt5/QtSql/qsqlquery.h \
   /usr/include/x86_64-linux-gnu/qt5/QtSql/qsqldatabase.h \
+  /usr/include/x86_64-linux-gnu/qt5/QtCore/QTimer \
+  /usr/include/x86_64-linux-gnu/qt5/QtCore/qtimer.h \
+  /usr/include/x86_64-linux-gnu/qt5/QtCore/qbasictimer.h \
   /usr/include/x86_64-linux-gnu/qt5/QtCore/QDataStream \
-  /usr/include/x86_64-linux-gnu/qt5/QtCore/qdatastream.h
+  /usr/include/x86_64-linux-gnu/qt5/QtCore/qdatastream.h \
+  /usr/include/x86_64-linux-gnu/qt5/QtCore/QSignalBlocker \
+  /usr/include/x86_64-linux-gnu/qt5/QtCore/qobject.h \
+  /usr/include/c++/11/mutex \
+  /usr/include/c++/11/bits/std_mutex.h \
+  /usr/include/c++/11/bits/unique_lock.h
 
+
+/usr/include/x86_64-linux-gnu/qt5/QtCore/QSignalBlocker:
 
 /usr/include/x86_64-linux-gnu/qt5/QtCore/QDataStream:
 
@@ -2534,6 +2553,8 @@ ui_mainwindow.h:
 /usr/include/x86_64-linux-gnu/qt5/QtSql/qsqldriver.h:
 
 /usr/include/x86_64-linux-gnu/qt5/QtCore/qtcoreversion.h:
+
+/usr/include/x86_64-linux-gnu/qt5/QtCore/qwaitcondition.h:
 
 /usr/include/x86_64-linux-gnu/qt5/QtCore/qstringalgorithms.h:
 
@@ -3437,6 +3458,8 @@ server_autogen/EXY53EAHJJ/moc_mainwindow.cpp:
 
 /usr/include/c++/11/tr1/riemann_zeta.tcc:
 
+/usr/include/x86_64-linux-gnu/qt5/QtCore/QTimer:
+
 server_autogen/EXY53EAHJJ/moc_server.cpp:
 
 /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QMessageBox:
@@ -3662,5 +3685,3 @@ server_autogen/EXY53EAHJJ/moc_server.cpp:
 /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qtwidgetsglobal.h:
 
 /usr/include/x86_64-linux-gnu/qt5/QtCore/qurlquery.h:
-
-/usr/include/x86_64-linux-gnu/qt5/QtCore/qwaitcondition.h:

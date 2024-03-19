@@ -4,6 +4,7 @@
 #include <QDialog>
 #include <QPushButton>
 #include <QListWidgetItem>
+#include <QTimer>
 
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
@@ -13,6 +14,7 @@ MainWindow::MainWindow(QWidget *parent)
     ui->setupUi(this);
     updateChat();
     connect(server.get(), &Server::clientResponse, this, &MainWindow::updateChat);
+
 }
 
 MainWindow::~MainWindow()
@@ -26,7 +28,7 @@ void MainWindow::updateChat()
     QString str = "SELECT u.login as sender_login, "
                   "CASE WHEN m.recipient_id IS NULL THEN 'all' ELSE r.login END "
                   "as recipient_login, m.content, to_char(m.received_at,'YYYY-MM-DD HH24:MI:SS') as sent, "
-                  "CASE WHEN m.recipient_id IS NULL THEN 'public' ELSE 'private' END as message_type "
+                  "CASE WHEN m.recipient_id IS NULL THEN '<pub>' ELSE '<pvt>' END as message_type "
                   "FROM msgdata m JOIN users u ON m.sender_id = u.id LEFT JOIN users r ON m.recipient_id = r.id "
                   "ORDER BY sent DESC";
     str = DBHandler::getConnection()->getData(str);
@@ -43,8 +45,8 @@ void MainWindow::updateChat()
     }
     str = lines.join('\n');
     ui->textBrowser->setText(str);
-    QRegExp privateTag("private");
-    QRegExp publicTag("public");
+    QRegExp privateTag("<pvt>");
+    QRegExp publicTag("<pub>");
     QTextCharFormat privateFormat;
     privateFormat.setForeground(QColor(255, 0, 0));
     QTextCharFormat publicFormat;
@@ -71,7 +73,7 @@ void MainWindow::updateChat()
     {
         lines[i].prepend("id:");
         lines[i].insert(lines[i].indexOf(' ') + 1, " user:  ");
-        lines[i].insert(lines[i].lastIndexOf(' ') + 1, "\t");
+        lines[i].insert(lines[i].lastIndexOf(' ') + 1, "  ");
         if(lines[i].indexOf("online") >= 0)
         {
             QListWidgetItem *item = new QListWidgetItem(ui->listWidget);
@@ -90,8 +92,8 @@ void MainWindow::updateChat()
 
 void MainWindow::on_listWidget_itemClicked(QListWidgetItem *item)
 {
-    QString id = item->text();
-    id = id.mid(0, id.indexOf(' '));
+    targetID = item->text();
+    targetID = targetID.mid(targetID.indexOf(':') + 1, targetID.indexOf(' ') - targetID.indexOf(':') - 1);
     QDialog* options = new QDialog(this);
     options->setWindowTitle("options");
     QVBoxLayout *layout = new QVBoxLayout(options);
@@ -107,10 +109,23 @@ void MainWindow::on_listWidget_itemClicked(QListWidgetItem *item)
 
 void MainWindow::on_banButton_clicked()
 {
-    qDebug() << "BAAAAAN!";
+    auto id = targetID.toInt();
+    server->checkForBlock(id);
+    timer = new QTimer(this);
+    timer->setInterval(20000);
+    connect(timer, &QTimer::timeout, this, &MainWindow::unblock);
+    timer->start();
+
 }
 
 void MainWindow::on_disconnectButton_clicked()
 {
     qDebug() << "GOODBYE!";
+}
+
+void MainWindow::unblock()
+{
+    auto id = targetID.toInt();
+    server->checkForUnBlock(id);
+    timer->stop();
 }

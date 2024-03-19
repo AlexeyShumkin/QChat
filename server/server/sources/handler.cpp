@@ -19,6 +19,7 @@ bool SignInHandler::specHandle(QString& str)
     QString hash = str.mid(str.indexOf(' ') + 1);
     query = "SELECT id FROM users WHERE login = '" + login + "' AND pw_hash = '" + hash + "'";
     str = DBHandler::getConnection()->getData(query);
+    if(!str.size()) return false;
     query = "UPDATE users SET status = 'online' WHERE login = '" + login + "'";
     bool check = DBHandler::getConnection()->executeQuery(query);
     return check && str.size();

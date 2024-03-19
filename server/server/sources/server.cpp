@@ -1,5 +1,8 @@
 #include "server.h"
 #include <QDataStream>
+#include <QTimer>
+#include <QSignalBlocker>
+#include <mutex>
 
 Server::Server()
 {
@@ -40,17 +43,19 @@ void Server::serverUp(QString& str)
     str = str.mid(str.indexOf('#') + 1);
 }
 
-void Server::sendToClient(QString str)
+void Server::unblock()
 {
-    data_.clear();
-    QDataStream out(&data_, QIODevice::WriteOnly);
+    socket->blockSignals(false);
+}
+
+void Server::sendToClient(const QString& str)
+{
+    data.clear();
+    QDataStream out(&data, QIODevice::WriteOnly);
     out.setVersion(QDataStream::Qt_5_15);
     out << str;
-    for(auto& socket : sockets_)
-    {
-        socket->write(data_);
-    }
-    emit clientResponse(str);
+    socket->write(data);
+    emit clientResponse();
 }
 
 void Server::setHandler(std::unique_ptr<IHandler>&& h)
@@ -60,18 +65,18 @@ void Server::setHandler(std::unique_ptr<IHandler>&& h)
 
 void Server::incomingConnection(qintptr socketDecriptor)
 {
-    socket_ = new QTcpSocket;
-    socket_->setSocketDescriptor(socketDecriptor);
-    connect(socket_, &QTcpSocket::readyRead, this, &Server::slotReadyRead);
-    connect(socket_, &QTcpSocket::disconnected, socket_, &QTcpSocket::deleteLater);
-    sockets_.push_back(socket_);
-    qDebug() << "client connected" << socket_->peerAddress();
+    socket = new QTcpSocket;
+    socket->setSocketDescriptor(socketDecriptor);
+    connect(socket, &QTcpSocket::readyRead, this, &Server::slotReadyRead);
+    connect(socket, &QTcpSocket::disconnected, socket, &QTcpSocket::deleteLater);
+    sockets.insert(socket, 0);
+    qDebug() << "client connected" << socket->peerAddress().toString();
 }
 
 void Server::slotReadyRead()
 {
-    socket_ = (QTcpSocket*)sender();
-    QDataStream in(socket_);
+    socket = (QTcpSocket*)sender();
+    QDataStream in(socket);
     in.setVersion(QDataStream::Qt_5_15);
     if(in.status() == QDataStream::Ok)
     {
@@ -79,6 +84,10 @@ void Server::slotReadyRead()
         QString str;
         in >> str;
         serverUp(str);
+        if(str.toInt() && !sockets[socket])
+        {
+            sockets[socket] = str.toInt();
+        }
         if(handler->specHandle(str))
         {
             sendToClient(str);
@@ -93,5 +102,41 @@ void Server::slotReadyRead()
     {
         qDebug() << "Datastream error";
     }
+}
+
+void Server::checkForUnBlock(int id)
+{
+    for(auto it = sockets.begin(); it != sockets.end(); ++it)
+    {
+        if(it.value() == id && it.key()->signalsBlocked())
+        {
+            std::mutex m;
+            {
+                std::lock_guard<std::mutex> l(m);
+                socket = it.key();
+                sendToClient("you are ublocked");
+            }
+            it.key()->blockSignals(false);
+        }
+    }
+    qDebug() << "user with id" << id << "was unblocked!";
+}
+
+void Server::checkForBlock(int id)
+{
+    for(auto it = sockets.begin(); it != sockets.end(); ++it)
+    {
+        if(it.value() == id)
+        {
+            std::mutex m;
+            {
+                std::lock_guard<std::mutex> l(m);
+                socket = it.key();
+                sendToClient("you are blocked");
+            }
+            it.key()->blockSignals(true);
+        }
+    }
+    qDebug() << "user with id" << id << "was blocked!";
 }
 

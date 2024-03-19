@@ -327,4 +327,7 @@ CMakeFiles/server.dir/server_autogen/mocs_compilation.cpp.o: \
  /usr/include/x86_64-linux-gnu/qt5/QtSql/QSqlQuery \
  /usr/include/x86_64-linux-gnu/qt5/QtSql/qsqlquery.h \
  /usr/include/x86_64-linux-gnu/qt5/QtSql/qsqldatabase.h \
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/QTimer \
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qtimer.h \
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qbasictimer.h \
  /home/awl/projects/QChat/server/build-server-qt5-Debug/server_autogen/EXY53EAHJJ/moc_server.cpp
