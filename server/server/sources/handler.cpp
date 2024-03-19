@@ -55,7 +55,7 @@ bool PostHandler::specHandle(QString& str)
 
 bool UsersDisplayHandler::specHandle(QString& str)
 {
-    query = "SELECT login FROM users";
+    query = "SELECT login, status FROM users";;
     str = DBHandler::getConnection()->getData(query);
     return str.size();
 }

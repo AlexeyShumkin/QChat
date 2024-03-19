@@ -360,6 +360,24 @@ CMakeFiles/client.dir/client_autogen/mocs_compilation.cpp.o: client_autogen/mocs
   /usr/include/x86_64-linux-gnu/qt5/QtCore/qfiledevice.h \
   /usr/include/x86_64-linux-gnu/qt5/QtGui/qvector2d.h \
   /usr/include/x86_64-linux-gnu/qt5/QtGui/qtouchdevice.h \
+  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QListWidgetItem \
+  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qlistwidget.h \
+  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qlistview.h \
+  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qabstractitemview.h \
+  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qabstractscrollarea.h \
+  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qframe.h \
+  /usr/include/x86_64-linux-gnu/qt5/QtCore/qabstractitemmodel.h \
+  /usr/include/x86_64-linux-gnu/qt5/QtCore/qitemselectionmodel.h \
+  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qabstractitemdelegate.h \
+  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qstyleoption.h \
+  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qabstractspinbox.h \
+  /usr/include/x86_64-linux-gnu/qt5/QtGui/qvalidator.h \
+  /usr/include/x86_64-linux-gnu/qt5/QtCore/qregularexpression.h \
+  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qslider.h \
+  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qabstractslider.h \
+  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qstyle.h \
+  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qtabbar.h \
+  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qrubberband.h \
   client_autogen/EXY53EAHJJ/moc_regform.cpp \
   /home/awl/projects/QChat/client/client/sources/regform.h \
   client_autogen/EXY53EAHJJ/moc_session.cpp \
@@ -1112,6 +1130,24 @@ CMakeFiles/client.dir/sources/main.cpp.o: /home/awl/projects/QChat/client/client
   /usr/include/x86_64-linux-gnu/qt5/QtCore/qfiledevice.h \
   /usr/include/x86_64-linux-gnu/qt5/QtGui/qvector2d.h \
   /usr/include/x86_64-linux-gnu/qt5/QtGui/qtouchdevice.h \
+  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QListWidgetItem \
+  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qlistwidget.h \
+  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qlistview.h \
+  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qabstractitemview.h \
+  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qabstractscrollarea.h \
+  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qframe.h \
+  /usr/include/x86_64-linux-gnu/qt5/QtCore/qabstractitemmodel.h \
+  /usr/include/x86_64-linux-gnu/qt5/QtCore/qitemselectionmodel.h \
+  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qabstractitemdelegate.h \
+  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qstyleoption.h \
+  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qabstractspinbox.h \
+  /usr/include/x86_64-linux-gnu/qt5/QtGui/qvalidator.h \
+  /usr/include/x86_64-linux-gnu/qt5/QtCore/qregularexpression.h \
+  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qslider.h \
+  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qabstractslider.h \
+  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qstyle.h \
+  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qtabbar.h \
+  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qrubberband.h \
   /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QApplication \
   /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qapplication.h \
   /usr/include/x86_64-linux-gnu/qt5/QtCore/qcoreapplication.h \
@@ -1477,6 +1513,24 @@ CMakeFiles/client.dir/sources/mainwindow.cpp.o: /home/awl/projects/QChat/client/
   /usr/include/x86_64-linux-gnu/qt5/QtCore/qfiledevice.h \
   /usr/include/x86_64-linux-gnu/qt5/QtGui/qvector2d.h \
   /usr/include/x86_64-linux-gnu/qt5/QtGui/qtouchdevice.h \
+  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QListWidgetItem \
+  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qlistwidget.h \
+  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qlistview.h \
+  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qabstractitemview.h \
+  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qabstractscrollarea.h \
+  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qframe.h \
+  /usr/include/x86_64-linux-gnu/qt5/QtCore/qabstractitemmodel.h \
+  /usr/include/x86_64-linux-gnu/qt5/QtCore/qitemselectionmodel.h \
+  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qabstractitemdelegate.h \
+  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qstyleoption.h \
+  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qabstractspinbox.h \
+  /usr/include/x86_64-linux-gnu/qt5/QtGui/qvalidator.h \
+  /usr/include/x86_64-linux-gnu/qt5/QtCore/qregularexpression.h \
+  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qslider.h \
+  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qabstractslider.h \
+  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qstyle.h \
+  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qtabbar.h \
+  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qrubberband.h \
   ui_mainwindow.h \
   /usr/include/x86_64-linux-gnu/qt5/QtCore/QVariant \
   /usr/include/x86_64-linux-gnu/qt5/QtCore/qvariant.h \
@@ -1494,13 +1548,13 @@ CMakeFiles/client.dir/sources/mainwindow.cpp.o: /home/awl/projects/QChat/client/
   /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qgridlayout.h \
   /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QLabel \
   /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qlabel.h \
-  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qframe.h \
   /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QLineEdit \
   /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qlineedit.h \
   /usr/include/x86_64-linux-gnu/qt5/QtGui/qtextcursor.h \
   /usr/include/x86_64-linux-gnu/qt5/QtGui/qtextformat.h \
   /usr/include/x86_64-linux-gnu/qt5/QtGui/qpen.h \
   /usr/include/x86_64-linux-gnu/qt5/QtGui/qtextoption.h \
+  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QListWidget \
   /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QMainWindow \
   /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QMenuBar \
   /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qmenubar.h \
@@ -1517,7 +1571,6 @@ CMakeFiles/client.dir/sources/mainwindow.cpp.o: /home/awl/projects/QChat/client/
   /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QTextBrowser \
   /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qtextbrowser.h \
   /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qtextedit.h \
-  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qabstractscrollarea.h \
   /usr/include/x86_64-linux-gnu/qt5/QtGui/qtextdocument.h \
   /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QVBoxLayout \
   /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QWidget \
@@ -1534,22 +1587,7 @@ CMakeFiles/client.dir/sources/mainwindow.cpp.o: /home/awl/projects/QChat/client/
   /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QVBoxLayout \
   /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QDialogButtonBox \
   /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qdialogbuttonbox.h \
-  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QListWidget \
-  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qlistwidget.h \
-  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qlistview.h \
-  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qabstractitemview.h \
-  /usr/include/x86_64-linux-gnu/qt5/QtCore/qabstractitemmodel.h \
-  /usr/include/x86_64-linux-gnu/qt5/QtCore/qitemselectionmodel.h \
-  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qabstractitemdelegate.h \
-  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qstyleoption.h \
-  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qabstractspinbox.h \
-  /usr/include/x86_64-linux-gnu/qt5/QtGui/qvalidator.h \
-  /usr/include/x86_64-linux-gnu/qt5/QtCore/qregularexpression.h \
-  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qslider.h \
-  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qabstractslider.h \
-  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qstyle.h \
-  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qtabbar.h \
-  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qrubberband.h
+  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QListWidget
 
 CMakeFiles/client.dir/sources/regform.cpp.o: /home/awl/projects/QChat/client/client/sources/regform.cpp \
   /usr/include/stdc-predef.h \
@@ -2632,25 +2670,13 @@ ui_regform.h:
 
 /home/awl/projects/QChat/client/client/sources/regform.cpp:
 
-/usr/include/x86_64-linux-gnu/qt5/QtWidgets/qstyle.h:
-
-/usr/include/x86_64-linux-gnu/qt5/QtWidgets/qabstractslider.h:
-
-/usr/include/x86_64-linux-gnu/qt5/QtGui/qvalidator.h:
-
-/usr/include/x86_64-linux-gnu/qt5/QtWidgets/qstyleoption.h:
-
-/usr/include/x86_64-linux-gnu/qt5/QtWidgets/qabstractitemview.h:
-
-/usr/include/x86_64-linux-gnu/qt5/QtWidgets/QListWidget:
-
-/usr/include/x86_64-linux-gnu/qt5/QtWidgets/qabstractscrollarea.h:
-
 /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qtextbrowser.h:
 
 /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qactiongroup.h:
 
 /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qaction.h:
+
+/usr/include/x86_64-linux-gnu/qt5/QtWidgets/QListWidget:
 
 /home/awl/projects/QChat/client/client/sources/mainwindow.cpp:
 
@@ -2672,12 +2698,6 @@ ui_regform.h:
 
 /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QLineEdit:
 
-/home/awl/projects/QChat/client/client/sources/session.cpp:
-
-/usr/include/x86_64-linux-gnu/qt5/QtWidgets/QStatusBar:
-
-/usr/include/x86_64-linux-gnu/qt5/QtWidgets/qframe.h:
-
 /usr/include/x86_64-linux-gnu/qt5/QtCore/QTranslator:
 
 /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qlabel.h:
@@ -2687,10 +2707,6 @@ ui_regform.h:
 /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QHBoxLayout:
 
 /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qgridlayout.h:
-
-/usr/include/x86_64-linux-gnu/qt5/QtWidgets/qabstractitemdelegate.h:
-
-/usr/include/x86_64-linux-gnu/qt5/QtWidgets/qlayoutitem.h:
 
 /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QLayout:
 
@@ -2709,6 +2725,28 @@ ui_regform.h:
 /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QDialog:
 
 client_autogen/EXY53EAHJJ/moc_regform.cpp:
+
+/usr/include/x86_64-linux-gnu/qt5/QtWidgets/qstyle.h:
+
+/usr/include/x86_64-linux-gnu/qt5/QtWidgets/qabstractslider.h:
+
+/usr/include/x86_64-linux-gnu/qt5/QtGui/qvalidator.h:
+
+/usr/include/x86_64-linux-gnu/qt5/QtWidgets/qstyleoption.h:
+
+/usr/include/x86_64-linux-gnu/qt5/QtWidgets/qlayoutitem.h:
+
+/usr/include/x86_64-linux-gnu/qt5/QtWidgets/qabstractitemdelegate.h:
+
+/home/awl/projects/QChat/client/client/sources/session.cpp:
+
+/usr/include/x86_64-linux-gnu/qt5/QtWidgets/QStatusBar:
+
+/usr/include/x86_64-linux-gnu/qt5/QtWidgets/qframe.h:
+
+/usr/include/x86_64-linux-gnu/qt5/QtWidgets/qabstractscrollarea.h:
+
+/usr/include/x86_64-linux-gnu/qt5/QtWidgets/qabstractitemview.h:
 
 /usr/include/x86_64-linux-gnu/qt5/QtCore/qfiledevice.h:
 
@@ -3161,6 +3199,8 @@ ui_loginform.h:
 /usr/include/c++/11/bits/uses_allocator.h:
 
 client_autogen/EXY53EAHJJ/moc_loginform.cpp:
+
+/usr/include/x86_64-linux-gnu/qt5/QtWidgets/QListWidgetItem:
 
 /usr/include/c++/11/chrono:
 

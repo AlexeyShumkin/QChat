@@ -15,11 +15,8 @@
   </property>
   <widget class="QWidget" name="centralwidget">
    <layout class="QVBoxLayout" name="verticalLayout" stretch="0,1">
-    <property name="spacing">
-     <number>6</number>
-    </property>
     <item>
-     <layout class="QHBoxLayout" name="horizontalLayout" stretch="0,1,0,0">
+     <layout class="QHBoxLayout" name="horizontalLayout">
       <item>
        <widget class="QLabel" name="label">
         <property name="text">
@@ -33,14 +30,7 @@
       <item>
        <widget class="QPushButton" name="pubButton">
         <property name="text">
-         <string>send to all</string>
-        </property>
-       </widget>
-      </item>
-      <item>
-       <widget class="QPushButton" name="pvtButton">
-        <property name="text">
-         <string>private message</string>
+         <string>post</string>
         </property>
        </widget>
       </item>
@@ -52,6 +42,7 @@
        <enum>Qt::Horizontal</enum>
       </property>
       <widget class="QTextBrowser" name="textBrowser"/>
+      <widget class="QListWidget" name="listWidget"/>
      </widget>
     </item>
    </layout>

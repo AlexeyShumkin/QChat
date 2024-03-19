@@ -38,6 +38,17 @@ MainWindow *MainWindow::createClient()
     return w;
 }
 
+void MainWindow::on_listWidget_itemClicked(QListWidgetItem *item)
+{
+    QDialog* option = new QDialog(this);
+    option->setWindowTitle("options");
+    QVBoxLayout* layout = new QVBoxLayout(option);
+    QPushButton* pvtButton = new QPushButton("private message", option);
+    connect(pvtButton, &QPushButton::clicked, this, &MainWindow::on_pvtButton_clicked);
+    layout->addWidget(pvtButton);
+    option->exec();
+}
+
 void MainWindow::on_msgEdit_returnPressed()
 {
     on_pubButton_clicked();
@@ -64,60 +75,30 @@ void MainWindow::on_pubButton_clicked()
 }
 void MainWindow::on_pvtButton_clicked()
 {
-    QDialog dialog(this);
-    dialog.setModal(true);
-    auto l = new QVBoxLayout();
-    dialog.setLayout(l);
-    auto userListWgt = new QListWidget(&dialog);
-    l->addWidget(userListWgt);
-    auto bnbox = new QDialogButtonBox(QDialogButtonBox::Ok | QDialogButtonBox::Cancel, &dialog);
-    l->addWidget(bnbox);
-    connect(bnbox, &QDialogButtonBox::accepted, &dialog, &QDialog::accept);
-    connect(bnbox, &QDialogButtonBox::rejected, &dialog, &QDialog::reject);
-    QString str{"4#"};
+    QString recipient = ui->listWidget->currentItem()->text();
+    recipient = recipient.mid(recipient.indexOf(' ') + 1, recipient.lastIndexOf(' ') - recipient.indexOf(' ') - 1);
+    QString str = "3#" + username + " @" + recipient + '@' + ui->msgEdit->text();
     session->sendToServer(str);
-    str.clear();
-    QTimer::singleShot(100, this, [=, &str]() {
+    ui->msgEdit->clear();
+    QTimer::singleShot(100, this, [=]() {
         auto respond = session->getBuffer();
-        for(auto c : respond)
+        if(respond == "-1")
         {
-            if(c == '\n')
-            {
-                userListWgt->addItem(str);
-                str.clear();
-            }
-            else
-            {
-                str.push_back(c);
-            }
+            QMessageBox::critical(this, tr("error"), tr("failed dispatch"));
+            return;
+        }
+        else
+        {
+            ui->textBrowser->clear();
+            updateChat();
         }
     });
-    userListWgt->setCurrentRow(0);
-    auto result = dialog.exec();
-    if(result == QDialog::Accepted && userListWgt->currentItem())
-    {
-        str = "3#" + username + " @" + userListWgt->currentItem()->text() + '@' + ui->msgEdit->text();
-        session->sendToServer(str);
-        ui->msgEdit->clear();
-        QTimer::singleShot(100, this, [=]() {
-            auto respond = session->getBuffer();
-            if(respond == "-1")
-            {
-                QMessageBox::critical(this, tr("error"), tr("failed dispatch"));
-                return;
-            }
-            else
-            {
-                ui->textBrowser->clear();
-                updateChat();
-            }
-        });
-    }
 }
 
 void MainWindow::updateChat()
 {
     QString str = "6#" + QString::number(userID);
+    session->clearBuffer();
     session->sendToServer(str);
     QTimer::singleShot(100, this, [=]() {
         if(!session->check()) return;
@@ -161,6 +142,38 @@ void MainWindow::updateChat()
             }
             ui->textBrowser->update();
         }
+        updateUserList();
+    });
+
+}
+
+void MainWindow::updateUserList()
+{
+    ui->listWidget->clear();
+    QString str{"4#"};
+    session->clearBuffer();
+    session->sendToServer(str);
+    QTimer::singleShot(100, this, [=]() {
+        auto respond = session->getBuffer();
+        if(respond == "-1") return;
+        QStringList lines = respond.split('\n');
+        for(int i = 0; i < lines.size() - 1; ++i)
+        {
+            lines[i].prepend("user: ");
+            if(lines[i].indexOf("online") >= 0)
+            {
+                QListWidgetItem *item = new QListWidgetItem(ui->listWidget);
+                item->setText(lines[i]);
+                item->setForeground(QBrush(Qt::darkGreen));
+            }
+            else
+            {
+                QListWidgetItem *item = new QListWidgetItem(ui->listWidget);
+                item->setText(lines[i]);
+                item->setForeground(QBrush(Qt::darkGray));
+            }
+        }
+        ui->listWidget->setCurrentRow(0);
     });
 }
 

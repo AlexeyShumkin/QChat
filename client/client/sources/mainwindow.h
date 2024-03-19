@@ -5,6 +5,7 @@
 #include "session.h"
 #include <memory>
 #include <QCloseEvent>
+#include <QListWidgetItem>
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
@@ -20,12 +21,14 @@ public:
     static MainWindow* createClient();
 
 private slots:
+    void on_listWidget_itemClicked(QListWidgetItem *item);
     void on_pubButton_clicked();
     void on_msgEdit_returnPressed();
     void on_pvtButton_clicked();
     void closeEvent(QCloseEvent* event);
 private:
     void updateChat();
+    void updateUserList();
     Ui::MainWindow* ui;
     std::shared_ptr<Session> session;
     int userID;

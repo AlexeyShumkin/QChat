@@ -14,6 +14,7 @@
 #include <QtWidgets/QHBoxLayout>
 #include <QtWidgets/QLabel>
 #include <QtWidgets/QLineEdit>
+#include <QtWidgets/QListWidget>
 #include <QtWidgets/QMainWindow>
 #include <QtWidgets/QMenuBar>
 #include <QtWidgets/QPushButton>
@@ -34,9 +35,9 @@ public:
     QLabel *label;
     QLineEdit *msgEdit;
     QPushButton *pubButton;
-    QPushButton *pvtButton;
     QSplitter *splitter;
     QTextBrowser *textBrowser;
+    QListWidget *listWidget;
     QMenuBar *menubar;
     QStatusBar *statusbar;
 
@@ -48,7 +49,6 @@ public:
         centralwidget = new QWidget(MainWindow);
         centralwidget->setObjectName(QString::fromUtf8("centralwidget"));
         verticalLayout = new QVBoxLayout(centralwidget);
-        verticalLayout->setSpacing(6);
         verticalLayout->setObjectName(QString::fromUtf8("verticalLayout"));
         horizontalLayout = new QHBoxLayout();
         horizontalLayout->setObjectName(QString::fromUtf8("horizontalLayout"));
@@ -67,12 +67,6 @@ public:
 
         horizontalLayout->addWidget(pubButton);
 
-        pvtButton = new QPushButton(centralwidget);
-        pvtButton->setObjectName(QString::fromUtf8("pvtButton"));
-
-        horizontalLayout->addWidget(pvtButton);
-
-        horizontalLayout->setStretch(1, 1);
 
         verticalLayout->addLayout(horizontalLayout);
 
@@ -82,6 +76,9 @@ public:
         textBrowser = new QTextBrowser(splitter);
         textBrowser->setObjectName(QString::fromUtf8("textBrowser"));
         splitter->addWidget(textBrowser);
+        listWidget = new QListWidget(splitter);
+        listWidget->setObjectName(QString::fromUtf8("listWidget"));
+        splitter->addWidget(listWidget);
 
         verticalLayout->addWidget(splitter);
 
@@ -104,8 +101,7 @@ public:
     {
         MainWindow->setWindowTitle(QCoreApplication::translate("MainWindow", "MainWindow", nullptr));
         label->setText(QCoreApplication::translate("MainWindow", "your message:", nullptr));
-        pubButton->setText(QCoreApplication::translate("MainWindow", "send to all", nullptr));
-        pvtButton->setText(QCoreApplication::translate("MainWindow", "private message", nullptr));
+        pubButton->setText(QCoreApplication::translate("MainWindow", "post", nullptr));
     } // retranslateUi
 
 };
