@@ -122,6 +122,12 @@ void MainWindow::updateChat()
     QTimer::singleShot(100, this, [=]() {
         if(!session->check()) return;
         auto respond = session->getBuffer();
+        if(respond == "you are blocked")
+        {
+            ui->textBrowser->setText(respond);
+            session->clearBuffer();
+            return;
+        }
         if(respond == "-1")
         {
             QMessageBox::critical(this, tr("error"), tr("failed attempt to obtain data"));

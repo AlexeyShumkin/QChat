@@ -13,7 +13,7 @@ public:
     void sendToServer(QString str);
     QString& getBuffer();
     bool check();
-
+    void clearBuffer();
 public slots:
     void slotReadyRead();
 private:
@@ -21,4 +21,5 @@ private:
     QByteArray data;
     QString buffer;
     quint16 nextBlockSize{0};
+    bool userBlockedFlag{false};
 };

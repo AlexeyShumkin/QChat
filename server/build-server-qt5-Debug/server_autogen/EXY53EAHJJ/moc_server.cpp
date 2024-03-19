@@ -23,7 +23,7 @@ QT_WARNING_PUSH
 QT_WARNING_DISABLE_DEPRECATED
 struct qt_meta_stringdata_Server_t {
     QByteArrayData data[11];
-    char stringdata0[121];
+    char stringdata0[124];
 };
 #define QT_MOC_LITERAL(idx, ofs, len) \
     Q_STATIC_BYTE_ARRAY_DATA_HEADER_INITIALIZER_WITH_OFFSET(len, \
@@ -42,13 +42,13 @@ QT_MOC_LITERAL(6, 66, 13), // "slotReadyRead"
 QT_MOC_LITERAL(7, 80, 13), // "checkForBlock"
 QT_MOC_LITERAL(8, 94, 2), // "id"
 QT_MOC_LITERAL(9, 97, 15), // "checkForUnBlock"
-QT_MOC_LITERAL(10, 113, 7) // "unblock"
+QT_MOC_LITERAL(10, 113, 10) // "disconnect"
 
     },
     "Server\0clientResponse\0\0incomingConnection\0"
     "qintptr\0socketDecriptor\0slotReadyRead\0"
     "checkForBlock\0id\0checkForUnBlock\0"
-    "unblock"
+    "disconnect"
 };
 #undef QT_MOC_LITERAL
 
@@ -73,7 +73,7 @@ static const uint qt_meta_data_Server[] = {
        6,    0,   48,    2, 0x0a /* Public */,
        7,    1,   49,    2, 0x0a /* Public */,
        9,    1,   52,    2, 0x0a /* Public */,
-      10,    0,   55,    2, 0x0a /* Public */,
+      10,    1,   55,    2, 0x0a /* Public */,
 
  // signals: parameters
     QMetaType::Void,
@@ -83,7 +83,7 @@ static const uint qt_meta_data_Server[] = {
     QMetaType::Void,
     QMetaType::Void, QMetaType::Int,    8,
     QMetaType::Void, QMetaType::Int,    8,
-    QMetaType::Void,
+    QMetaType::Void, QMetaType::Int,    8,
 
        0        // eod
 };
@@ -99,7 +99,7 @@ void Server::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, void
         case 2: _t->slotReadyRead(); break;
         case 3: _t->checkForBlock((*reinterpret_cast< int(*)>(_a[1]))); break;
         case 4: _t->checkForUnBlock((*reinterpret_cast< int(*)>(_a[1]))); break;
-        case 5: _t->unblock(); break;
+        case 5: _t->disconnect((*reinterpret_cast< int(*)>(_a[1]))); break;
         default: ;
         }
     } else if (_c == QMetaObject::IndexOfMethod) {

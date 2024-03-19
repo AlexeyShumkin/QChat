@@ -2147,7 +2147,11 @@ CMakeFiles/server.dir/sources/mainwindow.cpp.o: /home/awl/projects/QChat/server/
   /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qdialog.h \
   /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QPushButton \
   /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qpushbutton.h \
-  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qabstractbutton.h
+  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qabstractbutton.h \
+  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QLineEdit \
+  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qlineedit.h \
+  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QLabel \
+  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qlabel.h
 
 CMakeFiles/server.dir/sources/server.cpp.o: /home/awl/projects/QChat/server/server/sources/server.cpp \
   /usr/include/stdc-predef.h \
@@ -2486,6 +2490,10 @@ CMakeFiles/server.dir/sources/server.cpp.o: /home/awl/projects/QChat/server/serv
 
 /home/awl/projects/QChat/server/server/sources/server.cpp:
 
+/usr/include/x86_64-linux-gnu/qt5/QtWidgets/qlabel.h:
+
+/usr/include/x86_64-linux-gnu/qt5/QtWidgets/QLineEdit:
+
 /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qabstractbutton.h:
 
 /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QDialog:
@@ -2607,6 +2615,8 @@ ui_mainwindow.h:
 /usr/include/string.h:
 
 /usr/include/x86_64-linux-gnu/qt5/QtCore/qfuturewatcher.h:
+
+/usr/include/x86_64-linux-gnu/qt5/QtWidgets/qlineedit.h:
 
 /usr/include/x86_64-linux-gnu/qt5/QtCore/qbytearray.h:
 
@@ -3051,6 +3061,8 @@ ui_mainwindow.h:
 /usr/include/x86_64-linux-gnu/qt5/QtCore/qfuture.h:
 
 /usr/include/x86_64-linux-gnu/bits/timex.h:
+
+/usr/include/x86_64-linux-gnu/qt5/QtWidgets/QLabel:
 
 /usr/include/x86_64-linux-gnu/qt5/QtCore/QVariant:
 

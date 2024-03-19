@@ -4,7 +4,9 @@
 #include <QDialog>
 #include <QPushButton>
 #include <QListWidgetItem>
-#include <QTimer>
+#include <QLineEdit>
+#include <QLabel>
+
 
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
@@ -65,10 +67,15 @@ void MainWindow::updateChat()
         }
     }
     ui->textBrowser->update();
+    updateUserList();
+}
+
+void MainWindow::updateUserList()
+{
     ui->listWidget->clear();
-    str = "SELECT id, login, status FROM users ORDER BY id DESC";
+    QString str = "SELECT id, login, status FROM users ORDER BY id DESC";
     str = DBHandler::getConnection()->getData(str);
-    lines = str.split('\n');
+    QStringList lines = str.split('\n');
     for(int i = 0; i < lines.size() - 1; ++i)
     {
         lines[i].prepend("id:");
@@ -96,36 +103,54 @@ void MainWindow::on_listWidget_itemClicked(QListWidgetItem *item)
     targetID = targetID.mid(targetID.indexOf(':') + 1, targetID.indexOf(' ') - targetID.indexOf(':') - 1);
     QDialog* options = new QDialog(this);
     options->setWindowTitle("options");
-    QVBoxLayout *layout = new QVBoxLayout(options);
-    QPushButton* banButton = new QPushButton("ban", options);
-    QPushButton* disconnectButton = new QPushButton("disconnect", options);
+    QVBoxLayout* mainLayout = new QVBoxLayout(options);
+    QHBoxLayout* topLayout = new QHBoxLayout();
+    QLabel* label = new QLabel("block on seconds:");
+    timerValue = new QLineEdit();
+    QPushButton* banButton = new QPushButton("block");
+    topLayout->addWidget(label);
+    topLayout->addWidget(timerValue);
+    topLayout->addWidget(banButton);
+    QHBoxLayout* bottomLayout = new QHBoxLayout();
+    QPushButton* disconnectButton = new QPushButton("disconnect");
+    bottomLayout->addWidget(disconnectButton);
     connect(banButton, &QPushButton::clicked, this, &MainWindow::on_banButton_clicked);
     connect(disconnectButton, &QPushButton::clicked, this, &MainWindow::on_disconnectButton_clicked);
-    layout->addWidget(banButton);
-    layout->addWidget(disconnectButton);
+    mainLayout->addLayout(topLayout);
+    mainLayout->addLayout(bottomLayout);
     options->exec();
-
 }
 
 void MainWindow::on_banButton_clicked()
 {
-    auto id = targetID.toInt();
-    server->checkForBlock(id);
+    server->checkForBlock(targetID.toInt());
+    int value = timerValue->text().toInt();
     timer = new QTimer(this);
-    timer->setInterval(20000);
+    timer->setInterval(value * 1000);
     connect(timer, &QTimer::timeout, this, &MainWindow::unblock);
     timer->start();
-
 }
 
 void MainWindow::on_disconnectButton_clicked()
 {
-    qDebug() << "GOODBYE!";
+    server->disconnect(targetID.toInt());
+    QSqlQuery query(DBHandler::getConnection()->getDb());
+    query.prepare("UPDATE users SET status = 'offline' WHERE id = ?");
+    query.addBindValue(targetID.toInt());
+    if(!query.exec())
+    {
+        qDebug() << "error query";
+    }
+    updateUserList();
 }
 
 void MainWindow::unblock()
 {
-    auto id = targetID.toInt();
-    server->checkForUnBlock(id);
+    server->checkForUnBlock(targetID.toInt());
     timer->stop();
+}
+
+void MainWindow::on_timerValue_returnPressed()
+{
+    on_banButton_clicked();
 }

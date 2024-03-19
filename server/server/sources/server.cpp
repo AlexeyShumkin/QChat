@@ -43,11 +43,6 @@ void Server::serverUp(QString& str)
     str = str.mid(str.indexOf('#') + 1);
 }
 
-void Server::unblock()
-{
-    socket->blockSignals(false);
-}
-
 void Server::sendToClient(const QString& str)
 {
     data.clear();
@@ -80,7 +75,6 @@ void Server::slotReadyRead()
     in.setVersion(QDataStream::Qt_5_15);
     if(in.status() == QDataStream::Ok)
     {
-        qDebug() << "read...";
         QString str;
         in >> str;
         serverUp(str);
@@ -88,7 +82,7 @@ void Server::slotReadyRead()
         {
             sockets[socket] = str.toInt();
         }
-        if(handler->specHandle(str))
+        if(!sockets.find(socket).key()->signalsBlocked() && handler->specHandle(str))
         {
             sendToClient(str);
         }
@@ -114,12 +108,30 @@ void Server::checkForUnBlock(int id)
             {
                 std::lock_guard<std::mutex> l(m);
                 socket = it.key();
-                sendToClient("you are ublocked");
+                sendToClient("you are unblocked");
             }
             it.key()->blockSignals(false);
         }
     }
     qDebug() << "user with id" << id << "was unblocked!";
+}
+
+void Server::disconnect(int id)
+{
+    for(auto it = sockets.begin(); it != sockets.end(); ++it)
+    {
+        if(it.value() == id)
+        {
+            std::mutex m;
+            {
+                std::lock_guard<std::mutex> l(m);
+                socket = it.key();
+                sendToClient("you gonna be disconnected");
+            }
+            it.key()->disconnectFromHost();
+        }
+    }
+    qDebug() << "user with id" << id << "was disconnected!";
 }
 
 void Server::checkForBlock(int id)

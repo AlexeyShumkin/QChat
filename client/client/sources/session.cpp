@@ -43,3 +43,8 @@ bool Session::check()
     return socket->bytesAvailable() == 0;
 }
 
+void Session::clearBuffer()
+{
+    buffer.clear();
+}
+

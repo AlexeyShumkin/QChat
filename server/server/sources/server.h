@@ -18,6 +18,7 @@ private:
     QMap<QTcpSocket*, int> sockets;
     QByteArray data;
     quint16 nextBlockSize{ 0 };
+    bool userBlockedFlag{false};
     enum Commands { SIGNUP = 1, SIGNIN, POST, USERS, SIGNOUT, UPDATE };
     std::unique_ptr<IHandler> handler;
     void sendToClient(const QString& str);
@@ -29,5 +30,5 @@ public slots:
     void slotReadyRead();
     void checkForBlock(int id);
     void checkForUnBlock(int id);
-    void unblock();
+    void disconnect(int id);
 };
