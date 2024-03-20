@@ -46,6 +46,7 @@ public:
         RegForm->resize(272, 146);
         verticalLayout = new QVBoxLayout(RegForm);
         verticalLayout->setObjectName(QString::fromUtf8("verticalLayout"));
+        verticalLayout->setSizeConstraint(QLayout::SetMinimumSize);
         formLayout = new QFormLayout();
         formLayout->setObjectName(QString::fromUtf8("formLayout"));
         label = new QLabel(RegForm);

@@ -39,9 +39,7 @@ void LoginForm::on_buttonBox_accepted()
         }
         else
         {
-            qDebug() << respond;
             auto id = respond.toInt();
-            qDebug() << id;
             emit accepted(id, ui->loginEdit->text());
         }
     });

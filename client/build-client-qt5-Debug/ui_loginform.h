@@ -29,8 +29,8 @@ public:
     QVBoxLayout *verticalLayout;
     QFormLayout *formLayout;
     QLabel *login;
-    QLabel *password;
     QLineEdit *loginEdit;
+    QLabel *password;
     QLineEdit *passwordEdit;
     QSpacerItem *verticalSpacer;
     QHBoxLayout *horizontalLayout;
@@ -41,9 +41,9 @@ public:
     {
         if (LoginForm->objectName().isEmpty())
             LoginForm->setObjectName(QString::fromUtf8("LoginForm"));
-        LoginForm->resize(281, 115);
         verticalLayout = new QVBoxLayout(LoginForm);
         verticalLayout->setObjectName(QString::fromUtf8("verticalLayout"));
+        verticalLayout->setSizeConstraint(QLayout::SetMinimumSize);
         formLayout = new QFormLayout();
         formLayout->setObjectName(QString::fromUtf8("formLayout"));
         login = new QLabel(LoginForm);
@@ -51,15 +51,15 @@ public:
 
         formLayout->setWidget(0, QFormLayout::LabelRole, login);
 
-        password = new QLabel(LoginForm);
-        password->setObjectName(QString::fromUtf8("password"));
-
-        formLayout->setWidget(1, QFormLayout::LabelRole, password);
-
         loginEdit = new QLineEdit(LoginForm);
         loginEdit->setObjectName(QString::fromUtf8("loginEdit"));
 
         formLayout->setWidget(0, QFormLayout::FieldRole, loginEdit);
+
+        password = new QLabel(LoginForm);
+        password->setObjectName(QString::fromUtf8("password"));
+
+        formLayout->setWidget(1, QFormLayout::LabelRole, password);
 
         passwordEdit = new QLineEdit(LoginForm);
         passwordEdit->setObjectName(QString::fromUtf8("passwordEdit"));

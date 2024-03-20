@@ -205,7 +205,6 @@ void MainWindow::closeEvent(QCloseEvent *event)
 {
     QString str = "5#" + QString::number(userID);
     session->sendToServer(str);
-    qDebug() << str;
     QTimer::singleShot(0, this, [=]() {
         event->accept();
     });
