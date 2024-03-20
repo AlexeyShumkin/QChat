@@ -1,12 +1,18 @@
+CREATE DATABASE serverdb;
+CREATE USER zero_patient WITH PASSWORD '101010';
+GRANT ALL PRIVILEGES ON DATABASE serverdb TO zero_patient;
+
 CREATE TABLE users (
-	id SERIAL NOT NULL PRIMARY KEY,
+	id SERIAL PRIMARY KEY,
 	login VARCHAR(255) NOT NULL UNIQUE,
 	pw_hash VARCHAR(255) NOT NULL,
 	status VARCHAR(8) DEFAULT 'offline'
 );
 
+INSERT INTO users(login, pw_hash) VALUES('zero','1598781');
+
 CREATE TABLE msgdata (
-	id SERIAL NOT NULL PRIMARY KEY,
+	id SERIAL PRIMARY KEY,
 	sender_id INTEGER NOT NULL REFERENCES users(id)
 		ON DELETE CASCADE ON UPDATE CASCADE,
 	recipient_id INTEGER REFERENCES users(id)
@@ -14,3 +20,5 @@ CREATE TABLE msgdata (
 	content TEXT,
 	received_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP
 );
+
+INSERT INTO msgdata(sender_id, content) VALUES(1, 'hello, comrade! :)'); 
