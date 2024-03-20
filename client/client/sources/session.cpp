@@ -1,10 +1,23 @@
 #include "session.h"
 #include <QDataStream>
+#include <QFile>
+#include <QJsonObject>
+#include <QJsonDocument>
 
 Session::Session()
 {
+    QFile file("config.json");
+    if (!file.open(QIODevice::ReadOnly))
+    {
+        qDebug() << "Failed to open file";
+        return;
+    }
+    QByteArray data = file.readAll();
+    file.close();
+    QJsonDocument jsonDoc = QJsonDocument::fromJson(data);
+    QJsonObject jsonObj = jsonDoc.object();
     socket = new QTcpSocket(this);
-    socket->connectToHost("127.0.0.1", 7066);
+    socket->connectToHost(jsonObj["host"].toString(), jsonObj["port"].toInt());
     connect(socket, &QTcpSocket::readyRead, this, &Session::slotReadyRead);
     connect(socket, &QTcpSocket::disconnected, socket, &QTcpSocket::deleteLater);
 }

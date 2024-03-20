@@ -1,0 +1,6 @@
+{
+    "dbName": "servdb",
+    "userName": "chat",
+    "password": "12345",
+    "host": "localhost"
+}

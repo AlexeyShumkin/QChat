@@ -2297,7 +2297,21 @@ CMakeFiles/client.dir/sources/session.cpp.o: /home/awl/projects/QChat/client/cli
   /usr/include/c++/11/bits/std_mutex.h \
   /usr/include/c++/11/bits/unique_lock.h \
   /usr/include/x86_64-linux-gnu/qt5/QtCore/QDataStream \
-  /usr/include/x86_64-linux-gnu/qt5/QtCore/qdatastream.h
+  /usr/include/x86_64-linux-gnu/qt5/QtCore/qdatastream.h \
+  /usr/include/x86_64-linux-gnu/qt5/QtCore/QFile \
+  /usr/include/x86_64-linux-gnu/qt5/QtCore/qfile.h \
+  /usr/include/x86_64-linux-gnu/qt5/QtCore/qfiledevice.h \
+  /usr/include/x86_64-linux-gnu/qt5/QtCore/QJsonObject \
+  /usr/include/x86_64-linux-gnu/qt5/QtCore/qjsonobject.h \
+  /usr/include/x86_64-linux-gnu/qt5/QtCore/qjsonvalue.h \
+  /usr/include/x86_64-linux-gnu/qt5/QtCore/qcborvalue.h \
+  /usr/include/x86_64-linux-gnu/qt5/QtCore/qdatetime.h \
+  /usr/include/x86_64-linux-gnu/qt5/QtCore/qcborcommon.h \
+  /usr/include/x86_64-linux-gnu/qt5/QtCore/qregularexpression.h \
+  /usr/include/x86_64-linux-gnu/qt5/QtCore/qurl.h \
+  /usr/include/x86_64-linux-gnu/qt5/QtCore/quuid.h \
+  /usr/include/x86_64-linux-gnu/qt5/QtCore/QJsonDocument \
+  /usr/include/x86_64-linux-gnu/qt5/QtCore/qjsondocument.h
 
 CMakeFiles/client.dir/sources/startscreen.cpp.o: /home/awl/projects/QChat/client/client/sources/startscreen.cpp \
   /usr/include/stdc-predef.h \
@@ -2672,6 +2686,18 @@ CMakeFiles/client.dir/sources/startscreen.cpp.o: /home/awl/projects/QChat/client
 /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QStackedWidget:
 
 ui_startscreen.h:
+
+/usr/include/x86_64-linux-gnu/qt5/QtCore/qjsondocument.h:
+
+/usr/include/x86_64-linux-gnu/qt5/QtCore/quuid.h:
+
+/usr/include/x86_64-linux-gnu/qt5/QtCore/qcborcommon.h:
+
+/usr/include/x86_64-linux-gnu/qt5/QtCore/qcborvalue.h:
+
+/usr/include/x86_64-linux-gnu/qt5/QtCore/qjsonobject.h:
+
+/usr/include/x86_64-linux-gnu/qt5/QtCore/QFile:
 
 ui_regform.h:
 
@@ -3135,6 +3161,8 @@ ui_loginform.h:
 
 /usr/include/c++/11/new:
 
+/usr/include/x86_64-linux-gnu/qt5/QtCore/QJsonObject:
+
 /usr/include/x86_64-linux-gnu/bits/struct_mutex.h:
 
 /usr/include/c++/11/bits/stl_iterator.h:
@@ -3144,6 +3172,8 @@ ui_loginform.h:
 /usr/include/x86_64-linux-gnu/qt5/QtCore/qpair.h:
 
 /usr/include/x86_64-linux-gnu/qt5/QtCore/qatomic_cxx11.h:
+
+/usr/include/x86_64-linux-gnu/qt5/QtCore/qjsonvalue.h:
 
 /usr/include/c++/11/initializer_list:
 
@@ -3190,6 +3220,8 @@ ui_loginform.h:
 /usr/include/x86_64-linux-gnu/qt5/QtCore/qsharedpointer_impl.h:
 
 /usr/include/x86_64-linux-gnu/c++/11/bits/gthr.h:
+
+/usr/include/x86_64-linux-gnu/qt5/QtCore/qdatetime.h:
 
 /usr/include/c++/11/bits/functexcept.h:
 
@@ -3272,6 +3304,8 @@ client_autogen/EXY53EAHJJ/moc_loginform.cpp:
 /usr/include/x86_64-linux-gnu/bits/wchar.h:
 
 /usr/include/c++/11/bits/exception.h:
+
+/usr/include/x86_64-linux-gnu/qt5/QtCore/QJsonDocument:
 
 /usr/include/x86_64-linux-gnu/qt5/QtCore/qvector.h:
 

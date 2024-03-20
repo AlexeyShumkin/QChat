@@ -1,6 +1,9 @@
 #include "connection.h"
 #include <QMessageBox>
 #include <QtSql>
+#include <QFile>
+#include <QJsonObject>
+#include <QJsonDocument>
 
 DBHandler::~DBHandler()
 {
@@ -12,11 +15,21 @@ DBHandler::~DBHandler()
 
 DBHandler::DBHandler()
 {
+    QFile file("config.json");
+    if (!file.open(QIODevice::ReadOnly))
+    {
+        qDebug() << "Failed to open file";
+        return;
+    }
+    QByteArray data = file.readAll();
+    file.close();
+    QJsonDocument jsonDoc = QJsonDocument::fromJson(data);
+    QJsonObject jsonObj = jsonDoc.object();
     db = QSqlDatabase::addDatabase("QPSQL");
-    db.setDatabaseName("servdb");
-    db.setUserName("chat");
-    db.setPassword("12345");
-    db.setHostName("localhost");
+    db.setDatabaseName(jsonObj["dbName"].toString());
+    db.setUserName(jsonObj["userName"].toString());
+    db.setPassword(jsonObj["password"].toString());
+    db.setHostName(jsonObj["host"].toString());
     db.open();
 }
 

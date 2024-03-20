@@ -1027,7 +1027,10 @@ CMakeFiles/server.dir/sources/connection.cpp.o: /home/awl/projects/QChat/server/
   /usr/include/x86_64-linux-gnu/qt5/QtSql/qsqlrelationaltablemodel.h \
   /usr/include/x86_64-linux-gnu/qt5/QtSql/qsqlresult.h \
   /usr/include/x86_64-linux-gnu/qt5/QtSql/qsqltablemodel.h \
-  /usr/include/x86_64-linux-gnu/qt5/QtSql/qtsqlversion.h
+  /usr/include/x86_64-linux-gnu/qt5/QtSql/qtsqlversion.h \
+  /usr/include/x86_64-linux-gnu/qt5/QtCore/QFile \
+  /usr/include/x86_64-linux-gnu/qt5/QtCore/QJsonObject \
+  /usr/include/x86_64-linux-gnu/qt5/QtCore/QJsonDocument
 
 CMakeFiles/server.dir/sources/handler.cpp.o: /home/awl/projects/QChat/server/server/sources/handler.cpp \
   /usr/include/stdc-predef.h \
@@ -2552,6 +2555,10 @@ ui_mainwindow.h:
 
 /home/awl/projects/QChat/server/server/sources/handler.cpp:
 
+/usr/include/x86_64-linux-gnu/qt5/QtCore/QJsonObject:
+
+/usr/include/x86_64-linux-gnu/qt5/QtCore/QFile:
+
 /usr/include/x86_64-linux-gnu/qt5/QtSql/qtsqlversion.h:
 
 /usr/include/x86_64-linux-gnu/qt5/QtSql/qsqlresult.h:
@@ -3689,6 +3696,8 @@ server_autogen/EXY53EAHJJ/moc_server.cpp:
 /usr/include/strings.h:
 
 /usr/include/x86_64-linux-gnu/qt5/QtCore/qstringlistmodel.h:
+
+/usr/include/x86_64-linux-gnu/qt5/QtCore/QJsonDocument:
 
 /usr/include/x86_64-linux-gnu/qt5/QtCore/qsystemsemaphore.h:
 
