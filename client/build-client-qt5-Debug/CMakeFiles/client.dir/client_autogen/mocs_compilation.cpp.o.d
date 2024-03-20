@@ -329,6 +329,9 @@ CMakeFiles/client.dir/client_autogen/mocs_compilation.cpp.o: \
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qstyle.h \
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qtabbar.h \
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qrubberband.h \
+ /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QPushButton \
+ /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qpushbutton.h \
+ /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qabstractbutton.h \
  /home/awl/projects/QChat/client/build-client-qt5-Debug/client_autogen/EXY53EAHJJ/moc_regform.cpp \
  /home/awl/projects/QChat/client/build-client-qt5-Debug/client_autogen/EXY53EAHJJ/../../../client/sources/regform.h \
  /home/awl/projects/QChat/client/build-client-qt5-Debug/client_autogen/EXY53EAHJJ/moc_session.cpp \

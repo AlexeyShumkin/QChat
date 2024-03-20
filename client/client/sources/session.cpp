@@ -19,7 +19,9 @@ void Session::sendToServer(QString str)
     data.clear();
     QDataStream out(&data, QIODevice::WriteOnly);
     out.setVersion(QDataStream::Qt_5_15);
-    out << str;
+    out << quint16(0) << str;
+    out.device()->seek(0);
+    out << quint16(data.size() - sizeof(quint16));
     socket->write(data);
 }
 
@@ -31,10 +33,22 @@ QString& Session::getBuffer()
 void Session::slotReadyRead()
 {
     QDataStream in(socket);
+
     in.setVersion(QDataStream::Qt_5_15);
     if(in.status() == QDataStream::Ok)
     {
-        in >> buffer;
+        for(;;)
+        {
+            if(nextBlockSize == 0)
+            {
+                if(socket->bytesAvailable() < 2) break;
+                in >> nextBlockSize;
+            }
+            if(socket->bytesAvailable() < nextBlockSize) break;
+
+            in >> buffer;
+            nextBlockSize = 0;
+        }
     }
 }
 

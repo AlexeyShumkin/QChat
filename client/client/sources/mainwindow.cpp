@@ -17,6 +17,7 @@ MainWindow::MainWindow(int id, const QString& name, std::shared_ptr<Session> s, 
     , username(name)
 {
     ui->setupUi(this);
+    connect(session.get(), &Session::signalForButtons, this, &MainWindow::on_signalClientResponse);
     updateChat();
 }
 
@@ -36,6 +37,22 @@ MainWindow *MainWindow::createClient()
     auto w = new MainWindow(s.getUserID(), s.getUsername(), s.getSession());
 //  w->setAttribute(Qt::WA_DeleteOnClose);
     return w;
+}
+
+void MainWindow::on_signalClientResponse(QString& respond)
+{
+    if(respond == "you are blocked")
+    {
+        ui->textBrowser->setText(respond);
+        ui->pubButton->setEnabled(false);
+        pvtButton->setEnabled(false);
+    }
+    else if(respond == "you are unblocked")
+    {
+        ui->textBrowser->setText(respond);
+        ui->pubButton->setEnabled(true);
+        pvtButton->setEnabled(true);
+    }
 }
 
 void MainWindow::on_listWidget_itemClicked(QListWidgetItem *item)
@@ -106,18 +123,6 @@ void MainWindow::updateChat()
     QTimer::singleShot(100, this, [=]() {
         if(!session->check()) return;
         auto respond = session->getBuffer();
-        if(respond == "you are blocked")
-        {
-            ui->textBrowser->setText(respond);
-            session->clearBuffer();
-            return;
-        }
-        if(respond == "you are unblocked")
-        {
-            ui->textBrowser->clear();
-            updateUserList();
-            return;
-        }
         if(respond == "-1")
         {
             QMessageBox::critical(this, tr("error"), tr("failed attempt to obtain data"));

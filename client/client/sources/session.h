@@ -6,7 +6,6 @@
 class Session : public QTcpSocket
 {
     Q_OBJECT
-
 public:
     Session();
     ~Session();
@@ -17,6 +16,8 @@ public:
     void clearBuffer();
 public slots:
     void slotReadyRead();
+signals:
+    void signalForButtons(QString& str);
 private:
     QTcpSocket* socket;
     QByteArray data;
